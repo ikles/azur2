@@ -1,0 +1,248 @@
+@media only screen and (max-height : 768px) {
+  .signup {
+    height: auto;
+    min-height: 768px;
+  }
+  .signin {
+    min-height: auto;
+  }
+}
+
+@media only screen and (max-width : 1366px) {
+.signup-txts,
+.signform-wrap {
+  margin-top: 83px;
+}  
+.signup-txts {
+  padding-left: 40px;
+}
+.signform {
+  margin-top: 28px;
+}
+.signform-wrap {
+  
+}
+.signup-tit {
+  font-size: 35px;  
+}
+}
+
+@media only screen and (max-width : 1200px) {
+  .signup-r {
+    width: 512px;
+  }  
+}
+
+@media only screen and (max-width : 1199px) {
+  .contain {
+    max-width: 970px
+  }    
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1100px) {
+  .signup {
+              flex-wrap: wrap;
+              height: auto;
+  }
+  .signup-l,
+  .signup-r {
+    width: 100%;
+  }
+  .signup-l {
+    padding-right: 0;
+    min-height: 830px;    
+  }
+  .signform-wrap {
+    max-width: 100%;    
+    margin-top: 43px;
+  }
+
+  .hide-1100 {
+   display: none; 
+  }
+  .show-1100 {
+    display: block;
+  }
+  .sign-logo {
+    left: 20px;
+  }
+  .signup-txts,
+  .signform-wrap,
+  .signup-copy,
+  .signup-info {
+    padding: 0 20px;
+  } 
+  .signup-btn {
+    margin-top: 45px;
+  }
+  .signup-copy {
+    margin-left: 0;
+    margin-bottom: 25px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .signup-info {
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 0;
+    margin-bottom: 81px;
+    span {
+      display: none;
+    }
+  }
+  .signin {
+    .signup-l {
+      background: none;
+      height: auto;
+      min-height: auto;
+    }
+    .signup-r {
+      height: auto;
+      min-height: auto;
+      display: block;
+    }
+    .signup-info {
+      margin-bottom: 35px;
+    }
+    .signup-copy {
+      margin-bottom: 35px;
+      margin-top: 35px;
+    }
+    .signform-wrap {
+      margin-top: 125px;
+    }
+  }
+}
+
+@media only screen and (max-width : 991px) {
+  .contain {
+    max-width: 750px 
+  }    
+} 
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+  .contain {
+    max-width: 600px;
+  }
+  .signup-l {
+    min-height: 770px;
+  }
+}      
+
+@media only screen and (max-width : 640px) {
+  .contain {
+    max-width: 530px;
+  }
+  .signup-l {
+    min-height: 540px;
+  }
+  .signup-tit {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .signup-list-item {
+   font-size: 18px;
+   margin-bottom: 15px;   
+            background-size: 24px; 
+            background-position: left top 3px;
+            padding-left: calc(15px + 24px);
+  }  
+  .sign2 {
+    width: 42px;
+    height: 42px;
+    background-image: url('../img/signs-2-pda.svg');
+    
+  }
+} 
+
+
+
+@media only screen and (max-width : 570px) {
+  .contain {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+
+@media only screen and (max-width : 480px) {
+  .signup-l {
+    min-height: 573px;
+    background-image: url("../img/signin-bg-pda.jpg");
+  }
+  .signform-tit {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .signform-subtit,
+  .registr-label-span-txt,
+  .signup-info {
+    font-size: 14px;
+  }
+  .signup-close {
+    right: 20px;
+  }
+  .signup-txts {
+    margin-top: 113px;
+  }
+  .signup-tit {
+    margin-bottom: 28px;
+  }
+  .signup-list-item {
+    margin-bottom: 17px;
+  }
+  .signform {
+    margin-top: 37px;
+  }
+  .sugnup-label {
+    padding-right: 25px;
+  }
+  .signup-btn {
+    margin-top: 39px;
+  }
+    .signin {    
+    .signup-copy {
+   margin: 20px 0;   
+    }
+  }
+}
+
+@media only screen and (max-width : 375px) {
+  
+}
+
+@media only screen and (max-width : 360px) {
+  .signin-bot {    
+            flex-wrap: wrap;
+            .signin-btn {
+              width: 100%;
+              margin-top: 25px;
+            }
+  }
+}
+
+@media only screen and (max-width : 320px) {
+  body, body > * {
+    width: auto;
+    min-width: 320px;
+  }
+}
+
+
+@media only screen and (min-width : 1080px) {
+  .main-mnu {
+    display: block !important;
+  } 
+
+  .hidden-mnu {
+    display: none;
+  }
+} 
+
+

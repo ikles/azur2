@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1. Azur. Sign up</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="signup">
+     <a class="sign2 signup-close"></a>
+     <div class="signup-l">
+      <a href="index.html" class="sign-logo"><img src="img/logo-sign2.svg"></a>
+      <div class="signup-txts">
+        <div class="signup-tit">Добавьте свой объект<br> на Azur.ru</div>
+        <ul class="signup-list">
+          <li class="signup-list-item">Прямое бронирование</li>
+          <li class="signup-list-item">Без комиссии</li>
+          <li class="signup-list-item">Поддржка по телефону</li>
+          <li class="signup-list-item">6 000 000+ посетителей в год</li>
+          <li class="signup-list-item">Индивидуальный менеджер</li>
+        </ul>
+      </div>
+      <div class="signup-copy hide-1100">Copyright © 2003 — 2021 | Azur.ru — отдых на море без посредников</div>
+    </div>
+    <div class="signup-r">
+      <div class="signup-r-inn">
+        <div class="signform-wrap">
+          <div class="signform-tit">Регистрация</div>
+          <div class="signform-subtit">Это займет не более 10 минут</div>
+          <form class="signform">
+            <input type="text" class="signform-input filter-input icon user" requred placeholder="Ваше имя * ">
+            <input type="text" class="signform-input filter-input icon email" requred placeholder="E-mail * ">
+            <input type="text" class="signform-input filter-input icon geo" placeholder="Ваш город ">
+            <div class="signform-input-wrap">
+              <input type="password" class="signform-input filter-input icon pass" requred placeholder="Пароль *  ">
+              <span class="show-pass"></span>
+            </div>
+
+            <label class="sugnup-label filter-label">
+              <input type="checkbox" class="col-1-filter-checkbox" checked="">
+              <span class="registr-label-span"></span>
+              <span class="registr-label-span-txt">Отправляя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности</a> Azur.ru.
+              </span>
+            </label>
+
+            <button class="btn signup-btn">Зарегистрироваться</button>
+
+          </form>
+        </div>
+        <div class="signup-info"><span>Уже зарегистрированы?</span> <a href="#" class="">Войти в личный кабинет</a>
+        </div>
+        <div class="signup-copy show-1100">Copyright © 2003 — 2021 | Azur.ru — отдых на море без посредников</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+

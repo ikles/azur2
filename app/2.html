@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1. Azur. Sign up</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="signup signin">
+     <a class="sign2 signup-close"></a>
+
+     <div class="signup-r">
+      <a href="index.html" class="sign-logo"><img src="img/logo-sign.svg"></a>
+      <div class="signup-r-inn">
+        <div class="signform-wrap">
+          <div class="signform-tit">Вход в личный кабинет</div>
+          
+          <form class="signform signinform">
+            <input type="text" class="signform-input filter-input icon email" requred placeholder="E-mail * ">
+            <div class="signform-input-wrap">
+              <input type="password" class="signform-input filter-input icon pass" requred placeholder="Пароль *  ">
+              <span class="show-pass"></span>
+            </div>
+
+            <a href="#" class="forget-pass">Забыли пароль?</a>
+
+            <div class="signin-bot">
+              <label class="sugnin-label filter-label">
+                <input type="checkbox" class="col-1-filter-checkbox" checked="">
+                <span class="registr-label-span"></span>
+                <span class="registr-label-span-txt">Запомнить меня</span>
+              </label>
+
+              <button class="btn signin-btn">Войти на сайт</button>
+            </div>
+
+          </form>
+        </div>
+        <div class="signup-info"><span>Еще не зарегистрированы?</span> <a href="#">Пройти регистрацию</a>
+        </div>        
+      </div>
+    </div><!--r-->
+    <div class="signup-l">
+
+      <div class="signup-copy signup-copy-right">Copyright © 2003 — 2021 | Azur.ru — отдых на море без посредников</div>
+    </div><!--l-->
+  </div>
+
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+
