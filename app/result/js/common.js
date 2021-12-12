@@ -41,5 +41,23 @@ $('.signup-close').click(function () {
   $('.signup').fadeOut();
 });
 
+
+  $('.usobject-item').each(function () {
+    let self = $(this);
+    let link = $(this).find('.roll2');    
+    let txt = $(this).find('.roll2 .txt');    
+    link.click(function (e) {
+      $(this).toggleClass('rotate');
+      e.preventDefault();
+      if (txt.text() == 'Скрыть номера') {
+        txt.text('Показать номера');
+      }
+      else if (txt.text() == 'Показать номера') {
+        txt.text('Скрыть номера');
+      }
+      self.toggleClass('_open');
+    });
+  });
+
 }); //ready
 
