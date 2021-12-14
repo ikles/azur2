@@ -42,6 +42,12 @@ $('.signup-close').click(function () {
 });
 
 
+$('.booking-more').click(function (e) {
+  e.preventDefault();
+  $(this).hide();
+  $(this).next().addClass('_on');  
+})
+
   $('.usobject-item').each(function () {
     let self = $(this);
     let link = $(this).find('.roll2');    
