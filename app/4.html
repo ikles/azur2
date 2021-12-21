@@ -24,21 +24,108 @@
       <div class="contain">
         <div class="cols cols-objects">
           <div class="col-l">
-            @@include('var/_usermenu.html')
+            @@include('var/_usermenu.html',{
+              "cls1": "",
+              "cls2": "active",
+              "cls3": "",
+              "cls4": "",
+              "num": ""
+            })
           </div><!--col-l-->
           <div class="col-r">
 
             <div class="search-orders">
 
 
-<div class="ordersdown"><div class="ordersdown-img-w"><img src="img/ordersb-i.svg"></div><div class="ordersdown-text">Все заявки<img src="img/arr-b-gray.svg" class="ordersdown-arrow"></div></div>
+
+              <div class="ordersdown-w">
+                <div class="ordersdown" data-total="1">
+
+                  <div class="ordersdown-img-w"><img src="img/ordersb-i.svg"></div>
+                  <div class="ordersopen-txts">                      
+                    <div class="ordersopen-txt-2">Все заявки</div>
+                  </div>
+
+                </div>
+                <div class="ordersopen">
+                  <div class="ordersopen-elem active" data-val="1">
+                    <div class="ordersdown-img-w"><img src="img/ordersb-i.svg"></div>
+                    <div class="ordersopen-txts">                      
+                      <div class="ordersopen-txt-2">Все заявки</div>
+                    </div>
+                  </div>
+                  <div class="ordersopen-elem" data-val="2">
+                    <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+                    <div class="ordersopen-txts">
+                      <div class="ordersopen-txt-1">Квартира</div>
+                      <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                    </div>
+                  </div>
+                  <div class="ordersopen-elem" data-val="3">
+                    <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                    <div class="ordersopen-txts">
+                      <div class="ordersopen-txt-1">Гостевой дом</div>
+                      <div class="ordersopen-txt-2">Лотос</div>
+                    </div>
+                  </div>
+                  <div class="ordersopen-elem" data-val="4">
+                    <div class="ordersopen-img-w"><img src="img/ordersopen-img-3.jpg" class="ordersopen-img" /></div>
+                    <div class="ordersopen-txts">
+                      <div class="ordersopen-txt-1">Квартира</div>
+                      <div class="ordersopen-txt-2">Студия в центре города</div>
+                    </div>
+                  </div>
+                  <div class="ordersopen-elem" data-val="5">
+                    <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                    <div class="ordersopen-txts">
+                      <div class="ordersopen-txt-1">Квартира</div>
+                      <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
 
               <form class="search-form">
-                <input class="search-input filter-input icon" type="text" placeholder="Поиск по заявкам...">
+                <div class="filter-col filter-col-where">
+                  <div class="search-btn"></div>
+                  <div class="search-input-list-wrap search-input-list-wrap-1">
+
+                    <div class="top-action top-action-search">
+                      <span>Поиск по заявкам</span>  
+                    </div>
+                    <div class="search-input-list-inn">
+                      <input type="text" id="where_search-1" name="where_search" class="search-input filter-input icon" autocomplete="off" placeholder="Поиск по заявкам" data-list=".filter-where-list"/>                
+                      <ul class="filter-where-list filter-where-list-1">
+                        <li>
+                          <div class="ordersopen-elem ordersopen-elem-2" data-val="3">
+                            <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img mCS_img_loaded"></div>
+                            <div class="ordersopen-txts">
+                              <div class="ordersopen-txt-1">Гостевой дом</div>
+                              <div class="ordersopen-txt-2">Лотос</div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="ordersopen-elem ordersopen-elem-2" data-val="3">
+                            <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img mCS_img_loaded"></div>
+                            <div class="ordersopen-txts">
+                              <div class="ordersopen-txt-1">Гостевой дом</div>
+                              <div class="ordersopen-txt-2">Астра</div>
+                            </div>
+                          </div>
+                        </li>                   
+                      </ul>
+                    </div>
+                  </div>
+                </div><!--col-where-->
               </form>
+
+
             </div>
 
             <div class="booking-items">
+
               <div class="booking-item">
                 <div class="booking-row-1">
                   <div class="booking-col-1"><div class="booking-title">16 сен. - 21 сен.</div></div>
@@ -68,96 +155,100 @@
                       anastasia@yandex.ru
                     </a>
                   </div>
-                  <div class="booking-col-3">
-                    <div class="booking-actions"><a href="#" class="booking-cancel">Отклонить</a><a href="#" class="booking-btn btn">Подтвердить</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="booking-item">
-                <div class="booking-row-1">
-                  <div class="booking-col-1"><div class="booking-title">16 сен. - 21 сен.</div></div>
-                  <div class="booking-col-2"><div class="booking-title">Студия с балконом и кухней</div></div>
-                  <div class="booking-col-3">
-                    <div class="booking-summ">Сумма:<strong>50 000 ₽</strong></div>
-                  </div>
-                </div>
-                <div class="booking-row-2">
-                  <div class="booking-col-1">
-                    <div class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/user-ii.svg" class="" /></div>
-                      Анастасия
-                    </div>
-                    <div class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/users-i.svg" class="" /></div>
-                      2 взрослых, 1 ребенок
-                    </div>
-                  </div>
-                  <div class="booking-col-2">
-                    <a href="tel:+79504563421" class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/tel-i.svg" class="" /></div>
-                      +7 950 456 34 21
-                    </a>
-                    <a href="mailto:anastasia@yandex.ru" class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/mail-ii.svg" class="" /></div>
-                      anastasia@yandex.ru
-                    </a>
-                  </div>
-                  <div class="booking-col-3">
-                    <div class="booking-actions"><a href="#" class="booking-confirm">Подтверждено</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="booking-item">
-                <div class="booking-row-1">
-                  <div class="booking-col-1"><div class="booking-title">16 сен. - 21 сен.</div></div>
-                  <div class="booking-col-2"><div class="booking-title">Студия с балконом и кухней</div></div>
-                  <div class="booking-col-3">
-                    <div class="booking-summ">Сумма:<strong>50 000 ₽</strong></div>
-                  </div>
-                </div>
-                <div class="booking-row-2">
-                  <div class="booking-col-1">
-                    <div class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/user-ii.svg" class="" /></div>
-                      Анастасия
-                    </div>
-                    <div class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/users-i.svg" class="" /></div>
-                      2 взрослых, 1 ребенок
-                    </div>
-                  </div>
-                  <div class="booking-col-2">
-                    <a href="tel:+79504563421" class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/tel-i.svg" class="" /></div>
-                      +7 950 456 34 21
-                    </a>
-                    <a href="mailto:anastasia@yandex.ru" class="booking-char-it">
-                      <div class="booking-char-img"><img src="img/mail-ii.svg" class="" /></div>
-                      anastasia@yandex.ru
-                    </a>
-                  </div>
-                  <div class="booking-col-3">
-                    <div class="booking-actions"><a href="#" class="booking-cancel">Отклонить</a><a href="#" class="booking-btn btn">Подтвердить</a></div>
-                  </div>
-                </div>
-                <div class="booking-row-3">
-                  <a href="#" class="booking-more">Примечание<img src="img/arr-b-gray.svg" /> </a>
-                  <div class="booking-dop">
+                  <div class="booking-dop show-991">
                     <img src="img/dop-i.svg">Возможно более длительное пребывание. Квартира должна быть для НЕКУРЯЩИХ. Интересует общая цена. Связь по ватсап.</div>
+                    <div class="booking-col-3">
+                      <div class="booking-actions"><a href="#" class="booking-cancel">Отклонить</a><a href="#" class="booking-btn btn">Подтвердить</a></div>
+                    </div>
                   </div>
-                </div>
-              </div><!--booking-items-->
+                  <div class="booking-row-3">
+                    <a href="#" class="booking-more">Примечание<img src="img/arr-b-gray.svg" /> </a>
+                    <div class="booking-dop">
+                      <img src="img/dop-i.svg">Возможно более длительное пребывание. Квартира должна быть для НЕКУРЯЩИХ. Интересует общая цена. Связь по ватсап.</div>
+                    </div>
+                  </div>
 
-            </div><!--col-r-->
-          </div><!--cols-->
-        </div>
+                  <div class="booking-item">
+                    <div class="booking-row-1">
+                      <div class="booking-col-1"><div class="booking-title">16 сен. - 21 сен.</div></div>
+                      <div class="booking-col-2"><div class="booking-title">Студия с балконом и кухней</div></div>
+                      <div class="booking-col-3">
+                        <div class="booking-summ">Сумма:<strong>50 000 ₽</strong></div>
+                      </div>
+                    </div>
+                    <div class="booking-row-2">
+                      <div class="booking-col-1">
+                        <div class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/user-ii.svg" class="" /></div>
+                          Анастасия
+                        </div>
+                        <div class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/users-i.svg" class="" /></div>
+                          2 взрослых, 1 ребенок
+                        </div>
+                      </div>
+                      <div class="booking-col-2">
+                        <a href="tel:+79504563421" class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/tel-i.svg" class="" /></div>
+                          +7 950 456 34 21
+                        </a>
+                        <a href="mailto:anastasia@yandex.ru" class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/mail-ii.svg" class="" /></div>
+                          anastasia@yandex.ru
+                        </a>
+                      </div>
+                      <div class="booking-col-3">
+                        <div class="booking-actions"><a href="#" class="booking-cancel">Отклонить</a><a href="#" class="booking-btn btn">Подтвердить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-item">
+                    <div class="booking-row-1">
+                      <div class="booking-col-1"><div class="booking-title">16 сен. - 21 сен.</div></div>
+                      <div class="booking-col-2"><div class="booking-title">Студия с балконом и кухней</div></div>
+                      <div class="booking-col-3">
+                        <div class="booking-summ">Сумма:<strong>50 000 ₽</strong></div>
+                      </div>
+                    </div>
+                    <div class="booking-row-2">
+                      <div class="booking-col-1">
+                        <div class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/user-ii.svg" class="" /></div>
+                          Анастасия
+                        </div>
+                        <div class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/users-i.svg" class="" /></div>
+                          2 взрослых, 1 ребенок
+                        </div>
+                      </div>
+                      <div class="booking-col-2">
+                        <a href="tel:+79504563421" class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/tel-i.svg" class="" /></div>
+                          +7 950 456 34 21
+                        </a>
+                        <a href="mailto:anastasia@yandex.ru" class="booking-char-it">
+                          <div class="booking-char-img"><img src="img/mail-ii.svg" class="" /></div>
+                          anastasia@yandex.ru
+                        </a>
+                      </div>
+                      <div class="booking-col-3">
+                        <div class="booking-actions"><a href="#" class="booking-confirm">Подтверждено</a></div>
+                      </div>
+                    </div>
+                  </div>
 
-      </main>
+                </div><!--booking-items-->
 
-    </div>
-    <!--wrapper-->
+              </div><!--col-r-->
+            </div><!--cols-->
+          </div>
 
-    @@include('var/_scripts.html')
-  </body>
-  </html>
+        </main>
+
+      </div>
+      <!--wrapper-->
+
+      @@include('var/_scripts.html')
+    </body>
+    </html>
 

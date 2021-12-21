@@ -10,6 +10,8 @@ body.active .wrapper {
     opacity: 0.4;
 }
 
+$bord: #D0DAE9;
+
 .eye-3 {
     position: fixed;
     top: 0;
@@ -27,7 +29,7 @@ body.active .wrapper {
 .show-480,
 .show-570,
 .show-640,
-.show-992,
+.show-991,
 .show-1050,
 .show-1199,
 .show-768,
@@ -62,11 +64,11 @@ body.active .wrapper {
     }
 }
 
-@media (max-width: 992px) {
-    .hide-992 {
+@media (max-width: 991px) {
+    .hide-991 {
         display: none;
     }
-    .show-992 {
+    .show-991 {
         display: block;
     }
 }

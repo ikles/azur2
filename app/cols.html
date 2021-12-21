@@ -5,7 +5,7 @@
   <!--meta name="viewport" content="width=1200px"-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1. Azur. Sign up</title>  
+  <title>6. Azur. Like</title>  
   @@include('var/_styless.html')
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,21 +21,29 @@
     
     <main class="main">
 
-      <div class="cols">
-        <div class="col-l">
-          
+      <div class="contain">
+        <div class="cols cols-objects">
+          <div class="col-l">
+           @@include('var/_usermenu.html',{
+            "cls1": "active",
+            "cls2": "",
+            "cls3": "",
+            "cls4": "",
+            "num": ""
+          })
         </div><!--col-l-->
         <div class="col-r">
           
         </div><!--col-r-->
       </div><!--cols-->
-
-    </main>
+    </div>
     
-  </div>
-  <!--wrapper-->
+  </main>
+  
+</div>
+<!--wrapper-->
 
-  @@include('var/_scripts.html')
+@@include('var/_scripts.html')
 </body>
 </html>
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6. Azur. FeedBack</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    
+    <main class="main">
+
+      <div class="contain">
+        <div class="cols cols-objects">
+          <div class="col-l">
+           @@include('var/_usermenu.html',{
+            "cls1": "",
+            "cls2": "",
+            "cls3": "active",
+            "cls4": "",
+            "num": ""
+          })
+        </div><!--col-l-->
+        <div class="col-r">
+
+
+          <div class="search-orders">
+            <div class="ordersdown-w">
+              <div class="ordersdown" data-total="1">
+
+                <div class="ordersdown-img-w"><img src="img/all-revs.svg"></div>
+                <div class="ordersopen-txts">                      
+                  <div class="ordersopen-txt-2">Все отзывы</div>
+                </div>
+
+              </div>
+              <div class="ordersopen">
+                <div class="ordersopen-elem active" data-val="1">
+                 <div class="ordersdown-img-w"><img src="img/all-revs.svg"></div>
+                 <div class="ordersopen-txts">                      
+                  <div class="ordersopen-txt-2">Все отзывы</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="2">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="3">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Гостевой дом</div>
+                  <div class="ordersopen-txt-2">Лотос</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="4">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-3.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">Студия в центре города</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="5">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="user-reviews">
+          @@include('var/_rat.html',{
+            "name":"Николай",
+            "rate":"7,8",
+            "photos": "<a href='#' class='rev-photo'><img src='img/rev-1.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo'><img src='img/rev-2.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo'><img src='img/rev-3.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo rev-photo-more'><img src='img/rev-3.jpg' class='rev-photo-img' /><span class='rev-photo-img-span'>2+</span></a>"
+          })
+        </div><!--user-reviews-->
+
+      </div><!--col-r-->
+    </div><!--cols-->
+  </div>
+
+</main>
+
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+
