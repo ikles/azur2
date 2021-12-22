@@ -19,7 +19,7 @@
   <div class="wrapper">
     @@include('var/_header.html')    
     
-    <main class="main">
+    <main class="main main-5">
 
       <div class="contain">
         <div class="cols cols-objects">
@@ -86,11 +86,27 @@
         </div>
 
         <div class="user-reviews">
+          
           @@include('var/_rat.html',{
             "name":"Николай",
             "rate":"7,8",
-            "photos": "<a href='#' class='rev-photo'><img src='img/rev-1.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo'><img src='img/rev-2.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo'><img src='img/rev-3.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo rev-photo-more'><img src='img/rev-3.jpg' class='rev-photo-img' /><span class='rev-photo-img-span'>2+</span></a>"
+            "photos": "<div class='rev-photo-row'><a href='#' class='rev-photo'><img src='img/rev-1.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo'><img src='img/rev-2.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo'><img src='img/rev-3.jpg' class='rev-photo-img' /></a><a href='#' class='rev-photo rev-photo-more'><img src='img/rev-3.jpg' class='rev-photo-img' /><span class='rev-photo-img-span'>2+</span></a></div>",
+            "answ": "",
+            "img": "ordersopen-img-2.jpg",
+            "apart": "3-комнатная квартира c видом на море",
+            "btns": "<div class='ratbot-btns'><div class='booking-actions'><a href='#' class='ratbot-cancel'>Пожаловаться</a><a href='#' class='ratbot-btn btn'>Написать ответ</a></div></div>"
           })
+
+          @@include('var/_rat.html',{
+            "name":"Анна",
+            "rate":"7,8",
+            "photos": "",
+            "answ": "<div class='ratansw'><div class='ratansw-top'><div class='ratansw-l'>Вы:</div><div class='ratansw-r'>27 авг. 2021</div></div><div class='ratansw-text'>Спасибо большое за отзыв и высокую оценку!Мы стараемся создать комфортные условия для отдыха наших гостей.Спасибо,Светлана, за Ваш выбор!Всегда рады встрече с Вами и и вашей семьей у нас в гостевом доме</div></div>",
+            "img": "ordersopen-img-1.jpg",
+            "apart": "Студия с кухней",
+            "btns": ""
+          })
+
         </div><!--user-reviews-->
 
       </div><!--col-r-->
