@@ -36,17 +36,34 @@
   .contain {
     max-width: 1070px
   }  
-    .booking-col-1,
+  .booking-col-1,
   .booking-col-2 {
     width: 33.333%;
     flex: none;
   }
-    .booking-cancel {
+  .booking-cancel {
     margin-right: 11px;
   }
   .likes-col {
     width: 50%;
   }
+  .ratbot-btns {
+    margin-left: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .rat-actions {
+   flex-direction: column;      
+   align-items: center;
+ }            
+ .ratbot-btn {
+  margin-left: 0;
+  margin-bottom: 25px;
+  order: -1;
+}
+.ratansw {
+  margin-top: 25px;
+}
 }
 
 @media only screen and (max-width : 1200px) {
@@ -221,7 +238,7 @@
     margin-top: -8px;
     font-size: 14px;
     display: flex;    
-            align-items: flex-start;
+    align-items: flex-start;
   }
   .booking-dop img {    
     flex: none;
@@ -574,8 +591,49 @@ input[type="text"].search-input {
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
-.main-6 {
-  padding-bottom: 20px;
+.main-6,
+.main-5 {
+  padding-bottom: 40px;
+}
+
+.ratbot-btns {
+
+}
+.booking-actions {
+
+}            
+.ratbot-btn {
+
+}
+
+.ratbot-apart {
+  padding: 20px 15px;
+  border-bottom: 1px solid #D0DAE9;
+}
+.ratbot-btns {
+  margin-top: 0;
+}
+.ratbot {
+  padding: 30px 15px;
+}
+.ratbot.empty {
+  padding: 0;
+  border: none;
+}
+.ratvis {
+  padding: 27px 15px 34px 15px;
+}
+.rat-n-txt-1 {
+  margin-top: 5px;
+  margin-bottom: 3px;  
+  font-size: 14px;
+}
+.rev-photo {
+  width: 57px;
+  height: 57px;
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
 }
 } 
 
@@ -589,7 +647,9 @@ input[type="text"].search-input {
     padding-right: 20px;
   }
   .booking-btn,
- .booking-cancel {
+  .booking-cancel,
+  .ratbot-btn,
+  .ratbot-cancel {
    width: 100%;
    text-align: center;
  }
@@ -600,6 +660,38 @@ input[type="text"].search-input {
  .likes-col {
    width: 100%;
  }
+ .ordersdown-w-rat {
+   max-width: 100%;   
+   .ordersdown {
+     max-width: 100%;
+   }
+ }
+ .rat-p-lnk {  
+  font-size: 14px;
+  margin-top: -12px;
+  display: block;
+}
+.rat-p {  
+  &.show-hide-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    line-clamp: 5;
+    box-orient: vertical;  
+    transition: 0.5s;
+    &.on {
+      overflow: visible;
+    text-overflow: unset;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    box-orient: unset;
+    }
+  }
+}
 }
 
 
@@ -686,15 +778,72 @@ input[type="text"].search-input {
  .ordersdown .ordersopen-txt-2 {
    width: 104px;
  }
- .ordersopen-txt-2 {
-   width: 131px;
- }
- .booking-row-1 {
-   .booking-col-1 {
-     margin-right: 10px; 
-   }
- } 
+ .ordersdown-w-rat {
+   .ordersdown .ordersopen-txt-2 {
+    width: 100%;
 
+  }
+} 
+.ordersopen-txt-2 {
+ width: 131px;
+}
+.booking-row-1 {
+ .booking-col-1 {
+   margin-right: 10px; 
+ }
+} 
+.ratbot-apart {
+  .ordersopen-txts .ordersopen-txt-2 {
+    font-size: 14px;
+    width: 190px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+.ordersdown-w-ord {
+  .ordersdown .ordersopen-txt-2 {
+    width: 104px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;    
+  }
+}
+.ordersopen-ord {
+  .ordersopen-txts .ordersopen-txt-2 {
+    width: 104px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }  
+}
+.ordersopen-rat {
+ .ordersopen-txts .ordersopen-txt-2 {
+  width: 184px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}   
+}
+.ratansw {
+  margin-top: 28px;
+  padding: 21px 15px 21px 15px;
+}
+.ratansw-l {
+  font-size: 14px;
+}
+.ratansw-text {
+  margin-top: 13px;
+}
+.ratvis {
+  padding-bottom: 15px;
+}
+.ratbot {
+  margin-top: 20px;
+}
+.ratbot.empty {
+  margin: 0;
+} 
 }
 
 @media only screen and (max-width : 375px) {

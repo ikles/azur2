@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7. Azur. Like</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    
+    <main class="main">
+
+      <div class="contain">
+        <div class="cols cols-objects">
+          <div class="col-l">
+           @@include('var/_usermenu.html',{
+            "cls1": "",
+            "cls2": "",
+            "cls3": "",
+            "cls4": "",
+            "cls5": "active",
+            "num": ""
+          })
+        </div><!--col-l-->
+        <div class="col-r">
+
+          <div class="proftools">
+            <div class="proftools-l">
+              <label class="proftools-label">
+                <input type="file">
+                <div class="proftools-img-w">
+                  <img src="img/proftools-img.jpg" class="proftools-img">
+                </div>
+                <span class="proftools-upload">Изменить</span>
+              </label>
+            </div>
+            <div class="proftools-r">
+              <div class="proftools-tit">Основная информация</div>
+              <form class="proftools-form-1">
+                <div class="proftools-row">
+                  <div class="proftools-col">
+                    <div class="input-label">
+                      <span class="input-label-txt">Ваше имя</span>
+                      <input type="text" class="filter-input icon user" value="Александра" placeholder="">
+                    </div>
+                  </div><!--col-->
+                  <div class="proftools-col">
+                    <div class="input-label">
+                      <span class="input-label-txt">Ваш город</span>
+                      <input type="text" class="filter-input icon geo" value="Геленджик" placeholder="">
+                    </div>
+                  </div><!--col-->
+                  <div class="proftools-col">
+                    <div class="input-label">
+                      <span class="input-label-txt">Ваш телефон</span>
+
+                      <div class="filter-col filter-col-bord filter-col-lang">
+                        <input type="text" class="filter-input-nobord filter-input icon phone" value="+7 950 034 32 34" required>
+                        <select class="filter-col-select">
+                          <option value="Ru">Ru</option>
+                          <option value="Ua">Ua</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </div><!--col-->
+                  <div class="proftools-col">
+                    <div class="input-label">
+                      <span class="input-label-txt">E-mail / Логин</span>
+                      <input type="text" class="filter-input icon email" value="alexandra.ver@yandex.ru">
+                    </div>
+                  </div><!--col-->
+
+                  <div class="proftools-col-100">
+                    <div class="input-label">
+                      <span class="input-label-txt">Ваш телефон</span>
+                      <input type="text" class="filter-input icon site" requred="" placeholder="Например: azur.ru">
+                    </div>
+                  </div><!--col-->
+                  <div class="proftools-btn-w">
+                    <button class="btn proftools-btn" disabled="disabled">Сохранить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div><!--proftools-->
+          
+          <div class="proftools proftools-2">
+            <div class="proftools-l">              
+            </div><!--proftools-l-->
+            <div class="proftools-r">
+              <div class="proftools-tit">Смена пароля</div>
+              <form class="proftools-form-2">
+                <div class="proftools-row">
+                  <div class="proftools-col">                  
+                    <input type="password" class="filter-input icon pass" requred="" placeholder="Старый пароль">                  
+                  </div><!--col-->
+                  <div class="proftools-col">
+                    <input type="password" class="filter-input icon pass" requred="" placeholder="Новый пароль">                  
+                  </div><!--col-->
+                </div>
+                <div class="proftools-btn-w proftools-btn-w-2">
+                  <button class="btn proftools-btn-2" disabled="disabled">Сохранить</button>
+                </div>
+              </form>
+
+            </div><!--proftools-r-->
+          </div><!--proftools-->
+          
+          
+
+          
+
+          
+          
+
+        </div><!--col-r-->
+      </div><!--cols-->
+    </div>
+
+  </main>
+
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+

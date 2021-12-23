@@ -26,6 +26,30 @@ jQuery(document).ready(function( $ ) {
   });
 
 
+
+  if ($('.show-hide-link').length) {
+    $('.show-hide-link').each(function () {
+      const txt = $(this).prev();
+      let lnkNode = $(this).find('span');      
+      $(this).click(function (e) {
+        e.preventDefault();
+
+        let lnkTxt = $(this).find('span').text();
+
+        if (lnkTxt == 'Подробнее') {
+          lnkNode.text('Скрыть')
+        }
+        else if (lnkTxt == 'Скрыть') {
+          lnkNode.text('Подробнее')
+        }
+
+        $(this).toggleClass('rotate');
+        txt.toggleClass('on');
+      })
+    })
+  }
+
+
   $('.ordersdown-w').each(function () {
     const self = $(this)
     const click = $(this).find('.ordersdown')
@@ -81,6 +105,12 @@ jQuery(document).ready(function( $ ) {
     $('.search-input-list-wrap-1').fadeOut();
   });
   
+  if($('select').length) {
+    $('select').select2({
+      minimumResultsForSearch: -1
+    });
+  }
+
 
   /************************************/
 
@@ -129,6 +159,20 @@ $('.usobject-item').each(function () {
     }
     self.toggleClass('_open');
   });
+});
+
+const form1 = document.querySelector('.proftools-form-1'),
+proftoolsBtn = document.querySelector('.proftools-btn');
+
+form1.addEventListener('input', function () {
+  proftoolsBtn.removeAttribute("disabled");
+});
+
+const form2 = document.querySelector('.proftools-form-2'),
+proftoolsBtn2 = document.querySelector('.proftools-btn-2');
+
+form2.addEventListener('input', function () {
+  proftoolsBtn2.removeAttribute("disabled");
 });
 
 }); //ready
