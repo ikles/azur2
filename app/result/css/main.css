@@ -3408,6 +3408,9 @@ input[type="text"].filter-input-nobord {
   .proftools-label input[type="file"] {
     display: none; }
 
+.main-7 {
+  padding-bottom: 44px; }
+
 @media only screen and (max-height: 700px) {
   .signup {
     height: auto;
@@ -3621,7 +3624,31 @@ input[type="text"].filter-input-nobord {
       width: 100%;
       margin-top: 10px; }
   .likes-col {
-    width: 50%; } }
+    width: 50%; }
+  .proftools {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .proftools-r {
+    padding-left: 0;
+    width: 100%; }
+  .proftools-l {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 45px;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .proftools-l.empty {
+    margin: 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
@@ -3777,7 +3804,21 @@ input[type="text"].filter-input-nobord {
     display: flex;
     margin-left: 10px; }
   .search-input-list-wrap {
-    display: none; } }
+    display: none; }
+  .proftools-row {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .proftools-col {
+    width: 100%; }
+  .proftools-col {
+    margin-bottom: 25px; }
+  .input-label-txt {
+    font-size: 14px; }
+  .proftools {
+    padding: 30px 15px 15px 15px; }
+    .proftools:not(:last-child) {
+      margin-bottom: 20px; } }
 
 @media only screen and (max-width: 640px) {
   .contain {
@@ -3956,7 +3997,9 @@ input[type="text"].filter-input-nobord {
       text-overflow: unset;
       -webkit-line-clamp: unset;
       line-clamp: unset;
-      box-orient: unset; } }
+      box-orient: unset; }
+  .proftools-btn, .proftools-btn-2 {
+    width: 100%; } }
 
 @media only screen and (max-width: 480px) {
   .signup-l {
@@ -4058,7 +4101,23 @@ input[type="text"].filter-input-nobord {
   .ratbot {
     margin-top: 20px; }
   .ratbot.empty {
-    margin: 0; } }
+    margin: 0; }
+  .proftools-tit {
+    font-size: 18px;
+    margin-bottom: 30px; }
+  .proftools-img-w {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    margin-top: -5px; }
+  .proftools-upload {
+    margin-top: 17px; }
+  .proftools-form-1 {
+    margin-top: 29px; }
+  .input-label-txt {
+    margin-bottom: 16px; }
+  .proftools-col {
+    margin-bottom: 28px; } }
 
 @media only screen and (max-width: 360px) {
   .signin-bot {
@@ -4198,7 +4257,7 @@ input[type="text"].filter-input-nobord {
   border: none; }
 
 body.active {
-  background: url("../img/1920.jpg") no-repeat top -85px center; }
+  background: url("../img/1920.jpg") no-repeat top 0px center; }
   body.active .wrapper {
     opacity: 0.4; }
   body.active .footer {
