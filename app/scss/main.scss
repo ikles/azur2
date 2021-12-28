@@ -2499,6 +2499,262 @@ cursor: pointer;
   padding-bottom: 44px;
 }
 
+.wrapper.bord {
+}
+
+.createobj-main {
+  padding-top: 25px;
+}
+
+.back-link {
+  background-image: url("../img/arr-l-gray.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 17px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(145, 159, 179);
+  margin-bottom: 40px;
+}
+
+.cols-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.col-r {
+}
+
+.createobj-h1 {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 1.2;
+  color: rgb(47, 53, 68);
+}
+
+.col-l-inverse {
+  width: 305px;
+  margin-left: 20px;
+}
+
+.stages-tit {
+  font-weight: 600;
+  font-size: 18px;
+  color: #2F3544;
+}
+
+.cols-inv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createobj-form-it {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(46, 52, 68, 0.07) 0px 20px 20px -10px;
+  border-radius: 10px;
+  padding: 40px 30px;
+}
+
+
+
+.objphotos {
+  margin-top: 40px;
+  display: flex;
+  margin-bottom: 29px;
+}
+
+.objphotos-it {
+  box-shadow: rgba(46, 52, 68, 0.3) 0px 15px 15px -10px;
+  border-radius: 6px;
+  width: 171px;
+  height: 120px;
+  display: block;
+  position: relative;
+}
+
+.objphotos-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.objphotos-actions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  flex-direction: column;
+}
+
+.objphotos-action-full {
+  background: url("../img/full-w.svg") center center no-repeat rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.objphotos-action-del {
+  background: url("../img/remove-img.svg") center no-repeat rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.upload {
+  width: 171px;
+  height: 120px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(208, 218, 233);
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.objphotos-upl-txt {
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(145, 159, 179);
+  margin-top: 5px;
+}
+
+.objphotos-formats {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(113, 119, 131);
+}
+
+.proftools-tit2 {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.2;
+  color: rgb(47, 53, 68);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.createobj-del {
+  background-image: url("../img/remove-red.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.createobj-del-txt {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: right;
+  color: rgb(96, 106, 124);
+}
+
+.price-tabs {
+  display: flex;
+}
+
+.price-tabs-li {
+  width: 50%;
+}
+
+.price-tabs-link-act {
+  padding-bottom: 22px;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(47, 53, 68);
+  position: relative;
+}
+
+.price-tabs-link-act-before {
+  margin-top: 0px;
+  height: 3px;
+  background: rgb(49, 129, 246);
+  border-radius: 3px 3px 0px 0px;
+  position: absolute;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  width: 100%;
+  bottom: 0px;
+}
+
+.price-tabs-link {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(96, 106, 124);
+  display: block;
+}
+
+.createobj-add {
+  height: 46px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(46, 52, 68, 0.07) 0px 6px 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(145, 159, 179);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.createobj-add-ico {
+  margin-left: 6px;
+}
+
+.stages-progress {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(46, 52, 68, 0.07) 0px 20px 20px -10px;
+  border-radius: 10px;
+  padding: 31px 20px;
+}
+
+.stages-list {
+}
+
+.stages-list-item {
+  margin-bottom: 20px;
+}
+
+.stages-link-active {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(47, 53, 68);
+  display: block;
+  background-image: url("../img/stages-check.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 20px;
+}
+
+.stages-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(194, 204, 218);
+  display: block;
+}
+
 @import "_media.scss";
 @import "_hides.scss";
 @import "_after-styless";

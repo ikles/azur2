@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8. Azur. New Object</title>  
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')    
+    
+    <main class="main">
+
+      <div class="contain">
+        <div class="createobj-main">
+          <a href="#" class="back-link">Назад</a>
+          <div class="cols-header">
+            <!--col-l-->
+            <div class="col-r">
+              <div class="createobj-h1">Новый объект</div>
+            </div>
+            <!--col-r-->
+            <div class="col-l-inverse">
+              <div class="stages-tit">Этапы</div>
+            </div>
+          </div>
+          <div class="cols-inv">
+            <!--col-l-->
+            <div class="col-r">
+              <div class="createobj-form-it">
+                <div class="proftools-tit">Основная информация</div>
+                <div class="proftools-tit">Фото внешнего вида</div>
+                <div class="objphotos">
+                  <div class="objphotos-it">
+                    <img src="img/objphotos-1.jpg" class="objphotos-img" />
+                    <div class="objphotos-actions">
+                      <div class="objphotos-action-full"></div>
+                      <div class="objphotos-action-del"></div>
+                    </div>
+                  </div>
+                  <a href="#" class="upload">
+                    <img src="img/uploadd.svg" />
+                    <div class="objphotos-upl-txt">Загрузить</div>
+                  </a>
+                </div>
+                <div class="objphotos-formats">Допустимые форматы: JPEG, JPG, PNG</div>
+                <div class="proftools-tit2">
+                  Основная информация
+                  <div class="createobj-del"><div class="createobj-del-txt">#234234</div></div>
+                </div>
+                <ul class="price-tabs">
+                  <li class="price-tabs-li">
+                    <a href="#" class="price-tabs-link-act">
+                      Период
+                      <div class="price-tabs-link-act-before"></div>
+                    </a>
+                  </li>
+                  <li class="price-tabs-li"><a href="#" class="price-tabs-link">Фиксированная сумма</a></li>
+                </ul>
+                <div class="createobj-add">Добавить<img src="img/plus-gray.svg" class="createobj-add-ico" /></div>
+              </div>
+            </div>
+            <!--col-r-->
+            <div class="col-l-inverse">
+              <div class="stages-progress">
+                <ul class="stages-list">
+                  <li class="stages-list-item"><a href="#" class="stages-link-active">Основная информация</a></li>
+                  <li class="stages-list-item"><a href="#" class="stages-link">Контакты</a></li>
+                  <li class="stages-list-item"><a href="#" class="stages-link">Фото внешнего вида</a></li>
+                  <li class="stages-list-item"><a href="#" class="stages-link">Описание</a></li>
+                  <li class="stages-list-item"><a href="#" class="stages-link">Номера и цены</a></li>
+                  <li class="stages-list-item"><a href="#" class="stages-link">Оплата</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </main>
+    
+  </div>
+  <!--wrapper-->
+
+  @@include('var/_scripts.html')
+</body>
+</html>
+
