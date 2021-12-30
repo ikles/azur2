@@ -37,63 +37,475 @@
           <div class="cols-inv">
             <!--col-l-->
             <div class="col-r">
-              <div class="createobj-form-it">
+              <form class="createobj-form">
+
+
+               <div class="createobj-form-it" id="two">
+                <div class="createobj-form-section">
+                  <div class="proftools-tit2">
+                    Основная информация
+                    <div class="createobj-del"><div class="createobj-del-txt">#234234</div></div>
+                  </div>
+
+
+                  <div class="createobj-input-label">
+                    <span class="input-label-txt">Тип</span>                
+                    <div class="createobj-checks-row">
+                      <label class="filter-label createobj-check-label">
+                        <input type="checkbox" class="createobj-checkbox" name="typeobject2" checked>
+                        <span></span>
+                        <span class="label-span-txt">Номер</span>
+                      </label>
+                      <label class="filter-label createobj-check-label">
+                        <input type="checkbox" class="createobj-checkbox" name="typeobject2">
+                        <span></span>
+                        <span class="label-span-txt">Квартира</span>
+                      </label>
+                      <label class="filter-label createobj-check-label">
+                        <input type="checkbox" class="createobj-checkbox" name="typeobject2">
+                        <span></span>
+                        <span class="label-span-txt">Дом</span>
+                      </label>
+
+                    </div>
+                  </div><!--label-->
+
+                  <div class="createobj-input-label">
+                    <span class="input-label-txt input-txt-has-link">
+                      <span>Название</span>
+                      <span class="count-100"><span class="now-val">0</span> / 100</span>
+                    </span> 
+                    <input type="text" maxlength="100" id="myTextbox1" class="createobj-input filter-input icon title" placeholder="Например: Трехместный номер">
+                  </div><!--label-->
+                  <div class="proftools-row mb40">
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Этаж</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Комнат</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Спальных мест</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Площадь</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                  </div><!--proftools-row-->
+
+                  <div class="createobj-input-label">
+                    <span class="input-label-txt">
+                      <span>Мебель</span>                      
+                    </span> 
+                    <input type="text" maxlength="100" class="createobj-input filter-input" placeholder="Например: две односпальные кровати, раскладной диван, прикроватные тумбочки, шкаф, столик">
+                  </div><!--label-->
+
+                  <div class="proftools-row">
+                    <div class="proftools-col">
+                      <div class="input-label">
+                        <span class="input-label-txt">Кухня</span>
+                        <input type="text" class="createobj-input filter-input" placeholder="Например: Общая">
+                      </div>
+                    </div><!--col-->
+                    <div class="proftools-col">
+                      <div class="input-label">
+                        <span class="input-label-txt">Санузел</span>
+                        <input type="text" class="createobj-input filter-input" placeholder="Например: Раздельный, в номере">
+                      </div>
+                    </div><!--col-->
+                  </div><!--row-->
+
+                  <div class="input-label">
+                    <span class="input-label-txt">Описание номера</span>
+
+                    <textarea class="area" placeholder="Например: Трёхкомнатная квартира в центре"></textarea>
+                  </div>
+                  <div class="input-label">
+                    <span class="input-label-txt">Удобства</span>
+                    <div class="createobj-row-33">                    
+                     <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Телевизор</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Кухня</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Сейф</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Кондиционер</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Холодильник</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Чайник</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Фен</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Вентилятор</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Душ</span>
+                    </label>
+                    <label class="filter-label facilities-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="facilities2">
+                      <span></span>
+                      <span class="label-span-txt">Стиральная машина</span>
+                    </label>                    
+                  </div> 
+                </div>
+              </div><!--createobj-form-section-->
+              <div class="createobj-form-section">
+                <div class="proftools-tit">Фотографии номера</div>
+              </div><!--createobj-form-section-->
+            </div><!--form-it-->
+
+            <div class="createobj-form-it">
+              <div class="createobj-form-section">
                 <div class="proftools-tit">Основная информация</div>
-                <div class="proftools-tit">Фото внешнего вида</div>
-                <div class="objphotos">
-                  <div class="objphotos-it">
-                    <img src="img/objphotos-1.jpg" class="objphotos-img" />
-                    <div class="objphotos-actions">
-                      <div class="objphotos-action-full"></div>
-                      <div class="objphotos-action-del"></div>
+
+                <div class="createobj-input-label">
+                  <span class="input-label-txt">Тип объекта <sup>*</sup></span>                
+                  <div class="createobj-checks-row">
+                    <label class="filter-label createobj-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="typeobject">
+                      <span></span>
+                      <span class="label-span-txt">Гостиница</span>
+                    </label>
+                    <label class="filter-label createobj-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="typeobject" checked>
+                      <span></span>
+                      <span class="label-span-txt">Квартира</span>
+                    </label>
+                    <label class="filter-label createobj-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="typeobject">
+                      <span></span>
+                      <span class="label-span-txt">Дом</span>
+                    </label>
+                    <label class="filter-label createobj-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="typeobject">
+                      <span></span>
+                      <span class="label-span-txt">Гостевой дом</span>
+                    </label>
+                    <label class="filter-label createobj-check-label">
+                      <input type="checkbox" class="createobj-checkbox" name="typeobject">
+                      <span></span>
+                      <span class="label-span-txt">Частный сектор</span>
+                    </label>
+                  </div>
+                </div><!--label-->
+                <div class="createobj-input-label">
+                  <span class="input-label-txt input-txt-has-link">
+                    <span>Название <sup>*</sup></span>                    
+                  </span> 
+                  <input type="text" class="createobj-input filter-input icon title" placeholder="Например: Отель Москва">
+                </div><!--label-->
+                <div class="createobj-input-label">
+                  <span class="input-label-txt input-txt-has-link">
+                    <span>Адрес <sup>*</sup></span>
+                    <a href="#" class="label-lnk map">Указать на карте</a>
+                  </span> 
+                  <input type="text" class="createobj-input filter-input icon geo" placeholder="Например: Геленджик, ул. Победы 344/2">
+                </div><!--label-->
+              </div><!--form-section-->
+
+
+              <div class="createobj-form-section">
+               <div class="proftools-tit">Контакты</div>
+               <div class="proftools-row">
+                <div class="proftools-col">
+                  <div class="input-label">
+                    <span class="input-label-txt">Ваше имя <sup>*</sup></span>
+                    <input type="text" class="createobj-input filter-input icon user" placeholder="Например: Светлана" placeholder="">
+                  </div>
+                </div><!--col-->
+                <div class="proftools-col">
+                  <div class="input-label">
+                    <span class="input-label-txt">E-mail / Логин</span>
+                    <input type="text" class="createobj-input filter-input icon email" placeholder="alexandra.ver@yandex.ru">
+                  </div>
+                </div><!--col-->
+
+                <div class="proftools-col-group">
+                  <div class="proftools-col">
+                    <div class="input-label">
+                      <span class="input-label-txt">Ваш телефон</span>
+                      <div class="filter-col filter-col-bord filter-col-lang">
+                        <input type="text" class="createobj-input filter-input-nobord filter-input icon phone" placeholder="Например: +7 861 3234323" required>
+                        <select class="filter-col-select">
+                          <option value="Ru">Ru</option>
+                          <option value="Ua">Ua</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div><!--col-->
+                  <div class="proftools-col">
+                    <div class="createobj-checks-row createobj-checks-row-2">
+                      <label class="filter-label createobj-check-label">
+                        <input type="checkbox" class="createobj-checkbox" name="conts" checked>
+                        <span></span>
+                        <span class="label-span-txt">WhatsApp</span>
+                      </label>
+                      <label class="filter-label createobj-check-label">
+                        <input type="checkbox" class="createobj-checkbox" name="conts">
+                        <span></span>
+                        <span class="label-span-txt">Viber</span>
+                      </label>
+                      <label class="filter-label createobj-check-label">
+                        <input type="checkbox" class="createobj-checkbox" name="conts">
+                        <span></span>
+                        <span class="label-span-txt">Telegram</span>
+                      </label>
                     </div>
                   </div>
-                  <a href="#" class="upload">
-                    <img src="img/uploadd.svg" />
-                    <div class="objphotos-upl-txt">Загрузить</div>
-                  </a>
                 </div>
-                <div class="objphotos-formats">Допустимые форматы: JPEG, JPG, PNG</div>
-                <div class="proftools-tit2">
-                  Основная информация
-                  <div class="createobj-del"><div class="createobj-del-txt">#234234</div></div>
-                </div>
-                <ul class="price-tabs">
-                  <li class="price-tabs-li">
-                    <a href="#" class="price-tabs-link-act">
-                      Период
-                      <div class="price-tabs-link-act-before"></div>
-                    </a>
-                  </li>
-                  <li class="price-tabs-li"><a href="#" class="price-tabs-link">Фиксированная сумма</a></li>
-                </ul>
-                <div class="createobj-add">Добавить<img src="img/plus-gray.svg" class="createobj-add-ico" /></div>
-              </div>
-            </div>
-            <!--col-r-->
-            <div class="col-l-inverse">
-              <div class="stages-progress">
-                <ul class="stages-list">
-                  <li class="stages-list-item"><a href="#" class="stages-link-active">Основная информация</a></li>
-                  <li class="stages-list-item"><a href="#" class="stages-link">Контакты</a></li>
-                  <li class="stages-list-item"><a href="#" class="stages-link">Фото внешнего вида</a></li>
-                  <li class="stages-list-item"><a href="#" class="stages-link">Описание</a></li>
-                  <li class="stages-list-item"><a href="#" class="stages-link">Номера и цены</a></li>
-                  <li class="stages-list-item"><a href="#" class="stages-link">Оплата</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      
-    </main>
-    
-  </div>
-  <!--wrapper-->
 
-  @@include('var/_scripts.html')
+                <div class="proftools-col-100">
+                  <a href="#" class="add-contact">Добавить контакт</a>
+                </div>
+
+
+                <div class="proftools-col">
+                  <div class="input-label">
+                    <span class="input-label-txt">Сайт</span>
+                    <input type="text" class="createobj-input filter-input icon site" requred="" placeholder="Например: azur.ru">
+                  </div>
+                </div><!--col-->
+
+              </div>
+            </div><!--form-section-->
+            <div class="createobj-form-section">
+              <div class="proftools-tit">Фото внешнего вида</div>
+              <div class="objphotos">
+                <div class="objphotos-it">
+                  <img src="img/objphotos-1.jpg" class="objphotos-img" />
+                  <div class="objphotos-actions">
+                    <div class="objphotos-action-full"></div>
+                    <div class="objphotos-action-del"></div>
+                  </div>
+                </div>
+                <a href="#" class="upload">
+                  <img src="img/uploadd.svg" />
+                  <div class="objphotos-upl-txt">Загрузить</div>
+                </a>
+              </div><!--photos-->
+              <div class="objphotos-formats">Допустимые форматы: JPEG, JPG, PNG</div>
+              <div class="proftools-tit2">
+                Основная информация
+                <div class="createobj-del"><div class="createobj-del-txt">#234234</div></div>
+              </div>
+              <ul class="price-tabs">
+                <li class="price-tabs-li">
+                  <a href="#" class="price-tabs-link-act">
+                    Период
+                    <div class="price-tabs-link-act-before"></div>
+                  </a>
+                </li>
+                <li class="price-tabs-li"><a href="#" class="price-tabs-link">Фиксированная сумма</a></li>
+              </ul>
+              <div class="createobj-add">Добавить<img src="img/plus-gray.svg" class="createobj-add-ico" /></div>
+            </div><!--form-section-->
+            <div class="createobj-form-section">
+              <div class="proftools-tit">Описание</div>
+              <div class="createobj-input-label">
+                <span class="input-label-txt">
+                  <span>Автостоянка</span>
+                </span> 
+                <input type="text" class="createobj-input filter-input" placeholder="Например: Во дворе и на прилегающей территории">
+              </div><!--label-->
+              <div class="createobj-input-label">
+                <span class="input-label-txt">
+                  <span>Питание</span>
+                </span> 
+                <input type="text" class="createobj-input filter-input" placeholder="Например: Во дворе и на прилегающей территории">
+              </div><!--label-->
+              <div class="createobj-input-label">
+                <span class="input-label-txt">
+                  <span>Дополнительные услуги</span>
+                </span> 
+                <input type="text" class="createobj-input filter-input" placeholder="Например: Трансфер, экскурсии">
+              </div><!--label-->
+
+              <div class="proftools-tit">Удобства</div>
+
+              <div class="createobj-row-33 createobj-row-facilities">                    
+               <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Питание в отеле</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Телевизор</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Проживание с животными</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Бассейн</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Территория, двор</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Дети любого возраста</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Баня, Сауна</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Работает круглогодично</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Круглосуточная регистрация</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Парковка</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Собственный пляж</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Терминал</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Wi-fi</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Детская площадка</span>
+              </label>
+              <label class="filter-label facilities-check-label">
+                <input type="checkbox" class="createobj-checkbox" name="facilities">
+                <span></span>
+                <span class="label-span-txt">Кондиционер</span>
+              </label>
+            </div>                  
+
+            <div class="proftools-tit">Описание объекта</div>
+
+            <textarea class="area" placeholder="Например: Трёхкомнатная квартира в центре"></textarea>
+
+            <div class="createobj-input-label">
+              <span class="input-label-txt">
+                <span>Принцип предоплаты</span>
+              </span> 
+              <input type="text" class="createobj-input filter-input" placeholder="Например: Трансфер, экскурсии">
+            </div><!--label-->
+
+            <div class="createobj-row-70-30">
+              <div class="col-70">
+                <div class="createobj-input-label">
+                  <span class="input-label-txt">
+                    <span>Расчетный час</span>
+                  </span> 
+                  <input type="text" class="createobj-input filter-input" placeholder="Например: По договоренности">
+                </div><!--label-->
+              </div>
+              <div class="col-30">
+                <div class="createobj-input-label">
+                  <span class="input-label-txt">
+                    <span>Минимум ночей</span>
+                  </span> 
+                  <input type="text" class="createobj-input filter-input" placeholder="Например: 3">
+                </div><!--label-->  
+              </div>
+            </div>
+          </div><!--form-section-->
+        </div><!--form-it-->
+        <div class="createobj-h2">Номера</div>
+
+      </form>
+
+    </div><!--col-r-->
+
+    <div class="col-l-inverse">
+      <div class="stages-progress">
+        <ul class="stages-list">
+          <li class="stages-list-item"><a href="#" class="stages-link-active">Основная информация</a></li>
+          <li class="stages-list-item"><a href="#" class="stages-link">Контакты</a></li>
+          <li class="stages-list-item"><a href="#" class="stages-link">Фото внешнего вида</a></li>
+          <li class="stages-list-item"><a href="#" class="stages-link">Описание</a></li>
+          <li class="stages-list-item"><a href="#" class="stages-link">Номера и цены</a></li>
+          <li class="stages-list-item"><a href="#" class="stages-link">Оплата</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</main>
+
+</div>
+<!--wrapper-->
+
+@@include('var/_scripts.html')
 </body>
 </html>
 

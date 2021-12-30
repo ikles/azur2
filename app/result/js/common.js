@@ -25,7 +25,24 @@ jQuery(document).ready(function( $ ) {
     }, 500);  
   });
 
+  (function () {
+    const count_100 = $('.count-100');
+    let now_val = $('.now-val');
 
+    $('#myTextbox1').on('input', function() {      
+      now_val_2 = $(this).val().length;      
+      if (now_val_2 < 101) {
+        now_val.html(now_val_2);
+      }
+      if (now_val_2 >= 100) {        
+        count_100.addClass('red');
+      }
+      else {
+       count_100.removeClass('red'); 
+     }
+   });    
+  }());
+  
 
   if ($('.show-hide-link').length) {
     $('.show-hide-link').each(function () {
