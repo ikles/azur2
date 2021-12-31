@@ -1,3 +1,169 @@
+function bytesToSize(bytes) {
+ const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB']
+ if (!bytes) {
+  return '0 Byte';
+}
+const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)))
+return Math.round(bytes / Math.pow(1024, i)) + ' ' + sizes[i]
+}
+
+const element = (tag, classes = [], content) => {
+  const node = document.createElement(tag)
+
+  if (classes.length) {
+    node.classList.add(...classes)
+  }
+
+  if (content) {
+    node.textContent = content    
+  }
+  return node
+}
+
+const noop = function () {}
+
+function upload(selector, options = {}) {
+  let files = []
+  const onUpload = options.onUpload ?? noop
+  const input = document.querySelector(selector)
+    //const preview = document.createElement('div')
+    const preview = element('div', ['preview']);
+
+    preview.classList.add('preview')
+    preview.classList.add('objphotos')
+
+    /*const open = document.createElement('button')
+    open.classList.add('btn')
+    open.textContent = 'Откыть'*/
+    const open = element('div', ['upload'], '')
+    open.innerHTML = '<img src="img/uploadd.svg"><div class="objphotos-upl-txt">Загрузить</div>'
+    const upload = element('button', ['btn', 'btn-primary'], 'Загрузить')
+    upload.style.display = 'none'
+
+    if (options.multi) {
+      input.setAttribute('multiple', true)
+    }
+
+    if (options.accept && Array.isArray(options.accept)) {
+      input.setAttribute('accept', options.accept.join(','))
+    }
+
+    input.insertAdjacentElement('afterend', preview)
+    //input.insertAdjacentElement('afterend', upload)
+    preview.insertAdjacentElement('afterbegin', open)
+
+    const triggerInput = () => input.click()
+
+    const changeHandler = event => {
+      if(!event.target.files.length) {
+        return
+      }
+
+    //приводим к массиву
+    files = Array.from(event.target.files)
+
+    //чтобы при каждой загрузке исчезали фото которые загружены ранее
+    //preview.innerHTML = ''
+    upload.style = 'display-inline'
+
+    files.forEach(file => {
+      if (!file.type.match('image')) {
+        return
+      }
+      
+      const reader = new FileReader()
+      
+      reader.onload = ev => {
+        //console.log(ev.target.result)
+        //input.insertAdjacentHTML('afterend', `<img src="${ev.target.result}"/>`)
+        const src = ev.target.result
+        preview.insertAdjacentHTML('afterbegin', `
+          <div class="preview-image objphotos-it">
+          <div class="objphotos-actions">
+          <a data-fancybox="galfiles-1" href="img/${file.name}" class="objphotos-action-full"></a>                
+          <div class="preview-remove objphotos-action-del" data-name="${file.name}"></div>
+          </div>
+          <img class="objphotos-img" src="${src}" alt="${file.name}" />
+          </div>
+          `)        
+      }
+
+      reader.readAsDataURL(file)      
+    })
+  }
+
+  const removeHandler = event => {
+    //console.log('event', event.target.dataset)
+    //если нет дата атрибута name то этот клик не нужно обрабатывать
+    if(!event.target.dataset.name) {
+      return
+    }
+
+    //const name = event.target.dataset.name
+    //es6
+    const {name} = event.target.dataset
+    //console.log(files)
+    files = files.filter(file => file.name !== name)
+
+    if (!files.length) {
+      upload.style.display = 'none'
+    }
+
+    const block = preview
+    .querySelector(`[data-name="${name}"]`)
+    .closest('.preview-image')
+    block.remove();
+  }
+
+  const clearPreview = el => {
+    el.style.bottom = '4px'
+    el.innerHTML = '<div class="preview-info-progress"></div>'
+  }
+
+  const uploadHandler = () => {
+    preview.querySelectorAll('.preview-remove').forEach(e => e.remove());
+    const previewInfo = preview.querySelectorAll('.preview-info')
+    previewInfo.forEach(clearPreview) 
+    onUpload(files)
+  }
+
+  open.addEventListener('click', triggerInput)
+  input.addEventListener('change', changeHandler)
+  preview.addEventListener('click', removeHandler)
+  upload.addEventListener('click', uploadHandler)
+
+}//upload function end
+
+
+
+if (document.querySelectorAll('#file').length ) {  
+  upload('#file', {
+  multi: true,
+  accept: ['.png', '.jpeg', '.jpg', '.gif'],
+  onUpload(files) {
+    console.log('files', files)
+  }
+})  
+}
+
+if (document.querySelectorAll('#file2').length ) {  
+  upload('#file2', {
+  multi: true,
+  accept: ['.png', '.jpeg', '.jpg', '.gif'],
+  onUpload(files) {
+    console.log('files', files)
+  }
+})  
+}
+
+
+
+
+
+
+
+
+
 jQuery(document).ready(function( $ ) {
 
   $(".toggle-mnu").click(function() {
@@ -178,6 +344,7 @@ $('.usobject-item').each(function () {
   });
 });
 
+
 const form1 = document.querySelector('.proftools-form-1'),
 proftoolsBtn = document.querySelector('.proftools-btn');
 
@@ -194,3 +361,21 @@ form2.addEventListener('input', function () {
 
 }); //ready
 
+
+
+
+
+
+  $('[data-fancybox="galfiles-1"]').fancybox({
+    arrows: true,
+    infobar: false,
+    smallBtn: false,
+    toolbar: false,
+    iframe : {
+      css : {
+        width : '950px'
+      }
+    },    
+    slideClass: "myClass",
+    baseClass: "myclass"
+  });

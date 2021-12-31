@@ -3444,6 +3444,14 @@ input[type="text"].filter-input-nobord {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.createobj-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
 .createobj-form-it {
   background: white;
   box-shadow: rgba(46, 52, 68, 0.07) 0px 20px 20px -10px;
@@ -3465,10 +3473,13 @@ input[type="text"].filter-input-nobord {
 .objphotos-it {
   box-shadow: rgba(46, 52, 68, 0.3) 0px 15px 15px -10px;
   border-radius: 6px;
+  overflow: hidden;
   width: 171px;
   height: 120px;
   display: block;
   position: relative; }
+  .objphotos-it:not(:last-child) {
+    margin-right: 10px; }
 
 .objphotos-img {
   object-fit: cover;
@@ -3489,7 +3500,8 @@ input[type="text"].filter-input-nobord {
   overflow: hidden;
   width: 32px;
   height: 32px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  display: block; }
 
 .objphotos-action-del {
   background: url("../img/remove-img.svg") center no-repeat rgba(255, 255, 255, 0.85);
@@ -3497,7 +3509,8 @@ input[type="text"].filter-input-nobord {
   overflow: hidden;
   width: 32px;
   height: 32px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  cursor: pointer; }
 
 .upload {
   width: 171px;
@@ -3519,7 +3532,8 @@ input[type="text"].filter-input-nobord {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  cursor: pointer; }
   .upload:hover {
     text-decoration: none; }
 
@@ -3580,31 +3594,32 @@ input[type="text"].filter-input-nobord {
 .price-tabs-li {
   width: 50%; }
 
-.price-tabs-link-act {
-  padding-bottom: 22px;
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  font-size: 16px;
-  color: #2f3544;
-  position: relative; }
-
-.price-tabs-link-act-before {
-  margin-top: 0px;
-  height: 3px;
-  background: #3181f6;
-  border-radius: 3px 3px 0px 0px;
-  position: absolute;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  width: 100%;
-  bottom: 0px; }
-
 .price-tabs-link {
   font-size: 16px;
   text-align: center;
   color: #606a7c;
-  display: block; }
+  display: block;
+  padding-bottom: 22px; }
+  .price-tabs-link:hover {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2f3544; }
+  .price-tabs-link.act {
+    font-weight: 600;
+    color: #2f3544;
+    position: relative; }
+    .price-tabs-link.act:before {
+      margin-top: 0px;
+      height: 3px;
+      background: #3181f6;
+      border-radius: 3px 3px 0px 0px;
+      position: absolute;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      width: 100%;
+      bottom: 0px;
+      content: "";
+      display: block; }
 
 .createobj-add {
   height: 46px;
@@ -3821,6 +3836,32 @@ textarea.area {
 
 .mb40 {
   margin-bottom: 40px; }
+
+.card {
+  border-radius: 6px;
+  background-color: #FFF;
+  padding: 1rem;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2); }
+
+.btn-primary {
+  background: #209eff;
+  color: #fff; }
+
+input[type="file"] {
+  display: none; }
+
+.cols-inv {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .cols-inv .col-r {
+    width: 100%; }
 
 @media only screen and (max-height: 700px) {
   .signup {

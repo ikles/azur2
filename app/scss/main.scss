@@ -2574,7 +2574,12 @@ color: #2F3544;
 
 .cols-inv {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+}
+
+.createobj-form {
+  display: flex;  
+          flex-direction: column;
 }
 
 .createobj-form-it {
@@ -2584,7 +2589,10 @@ color: #2F3544;
   padding: 5px 0;  
   &:first-child {
    display: none; 
-   display: block;
+   display: block;   
+  }  
+  &:nth-child(2) {
+    
   }  
   &:not(:last-child) {
     margin-bottom: 60px;
@@ -2601,10 +2609,14 @@ color: #2F3544;
 .objphotos-it {
   box-shadow: rgba(46, 52, 68, 0.3) 0px 15px 15px -10px;
   border-radius: 6px;
+  overflow: hidden;
   width: 171px;
   height: 120px;
   display: block;
   position: relative;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .objphotos-img {
@@ -2626,7 +2638,8 @@ color: #2F3544;
   overflow: hidden;
   width: 32px;
   height: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
+  display: block;
 }
 
 .objphotos-action-del {
@@ -2636,6 +2649,7 @@ color: #2F3544;
   width: 32px;
   height: 32px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .upload {
@@ -2651,6 +2665,7 @@ color: #2F3544;
   flex-direction: column;
   padding-left: 15px;
   padding-right: 15px;
+  cursor: pointer;
   &:hover {
     text-decoration: none;
   }
@@ -2709,34 +2724,39 @@ color: #2F3544;
   width: 50%;
 }
 
-.price-tabs-link-act {
-  padding-bottom: 22px;
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  font-size: 16px;
-  color: rgb(47, 53, 68);
-  position: relative;
-}
 
-.price-tabs-link-act-before {
-  margin-top: 0px;
-  height: 3px;
-  background: rgb(49, 129, 246);
-  border-radius: 3px 3px 0px 0px;
-  position: absolute;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  width: 100%;
-  bottom: 0px;
-}
+
+
 
 .price-tabs-link {
-
   font-size: 16px;
   text-align: center;
   color: rgb(96, 106, 124);
   display: block;
+  padding-bottom: 22px;
+  &:hover {
+    text-decoration: none;
+    font-weight: 600;  
+    color: rgb(47, 53, 68);
+  }
+  &.act {    
+    font-weight: 600;  
+    color: rgb(47, 53, 68);
+    position: relative;
+    &:before {
+      margin-top: 0px;
+      height: 3px;
+      background: rgb(49, 129, 246);
+      border-radius: 3px 3px 0px 0px;
+      position: absolute;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      width: 100%;
+      bottom: 0px;
+      content: "";
+      display: block;
+    }
+  }
 }
 
 .createobj-add {
@@ -2943,6 +2963,65 @@ font-weight: 500;
 
 .mb40 {
   margin-bottom: 40px;
+}
+
+////////////upload
+
+.card {    
+  border-radius: 6px;
+  background-color: #FFF;
+  padding: 1rem;
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+}
+
+.btn {
+  
+}
+
+.btn-primary {  
+  background: #209eff;
+  color: #fff;
+}
+
+
+
+input[type="file"] {
+  display: none;
+}
+
+.preview {
+  
+}
+
+.preview-image {
+  
+}
+
+.preview-image img {
+  
+}
+
+.preview-remove {
+  
+}
+
+.preview-info {
+  
+}
+
+
+
+////////////upload end
+
+
+
+.cols-inv {
+  display: flex;
+  justify-content: space-between;  
+          flex-wrap: wrap;
+  .col-r {
+    width: 100%;
+  }
 }
 
 @import "_media.scss";
