@@ -138,22 +138,22 @@ function upload(selector, options = {}) {
 
 if (document.querySelectorAll('#file').length ) {  
   upload('#file', {
-  multi: true,
-  accept: ['.png', '.jpeg', '.jpg', '.gif'],
-  onUpload(files) {
-    console.log('files', files)
-  }
-})  
+    multi: true,
+    accept: ['.png', '.jpeg', '.jpg', '.gif'],
+    onUpload(files) {
+      console.log('files', files)
+    }
+  })  
 }
 
 if (document.querySelectorAll('#file2').length ) {  
   upload('#file2', {
-  multi: true,
-  accept: ['.png', '.jpeg', '.jpg', '.gif'],
-  onUpload(files) {
-    console.log('files', files)
-  }
-})  
+    multi: true,
+    accept: ['.png', '.jpeg', '.jpg', '.gif'],
+    onUpload(files) {
+      console.log('files', files)
+    }
+  })  
 }
 
 
@@ -345,6 +345,161 @@ $('.usobject-item').each(function () {
 });
 
 
+
+$('[data-fancybox="galfiles-1"]').fancybox({
+  arrows: true,
+  infobar: false,
+  smallBtn: false,
+  toolbar: false,
+  iframe : {
+    css : {
+      width : '950px'
+    }
+  },    
+  slideClass: "myClass",
+  baseClass: "myclass"
+});
+
+
+const allowedDates = [
+'2021-11-01', '2021-11-02', '2021-11-03',  '2021-11-04',  '2021-11-05',  '2021-11-06',  '2021-11-07',  '2021-11-08',  '2021-11-09',  '2021-11-10',  '2021-11-11',  '2021-11-12',  '2021-11-13', '2021-11-14',
+'2021-12-13', '2021-12-14', '2021-12-15', '2021-12-16','2021-12-17','2021-12-18','2021-12-19','2021-12-20','2021-12-21','2021-12-22','2021-12-23','2021-12-24','2021-12-25','2021-12-26','2021-12-27','2021-12-28','2021-12-29','2021-12-30','2021-12-31',
+];
+
+
+
+
+if ($('#filter_input_date').length) {
+  new Litepicker({
+    element: document.getElementById('filter_input_date'),
+    singleMode: true,
+    delimiter: ' - ',
+    lang: "ru-RU",
+    format: 'DD.MM',
+    numberOfMonths: 1,
+    setup: (picker) => {
+      picker.on('hide', () => {
+        $('.container__main_before-1').removeClass('on');
+      });
+    },
+    tooltipText: {
+      one: 'night',
+      other: 'nights'
+    },
+    tooltipNumber: (totalDays) => {
+      return totalDays - 1;
+    },
+    lockDaysFilter: (date1, date2, pickedDates) => {
+      return allowedDates.includes(date1.format('YYYY-MM-DD'));
+    }
+  });
+}
+
+if ($('#filter_input_date2').length) {
+  new Litepicker({
+    element: document.getElementById('filter_input_date2'),
+    singleMode: true,
+    delimiter: ' - ',
+    lang: "ru-RU",
+    format: 'DD.MM',
+    numberOfMonths: 1,
+    setup: (picker) => {
+      picker.on('hide', () => {
+        $('.container__main_before-1').removeClass('on');
+      });
+    },
+    tooltipText: {
+      one: 'night',
+      other: 'nights'
+    },
+    tooltipNumber: (totalDays) => {
+      return totalDays - 1;
+    },
+    lockDaysFilter: (date1, date2, pickedDates) => {
+      return allowedDates.includes(date1.format('YYYY-MM-DD'));
+    }
+  });
+}
+
+if ($('#filter_input_date3').length) {
+  new Litepicker({
+    element: document.getElementById('filter_input_date3'),
+    singleMode: true,
+    delimiter: ' - ',
+    lang: "ru-RU",
+    format: 'DD.MM',
+    numberOfMonths: 1,
+    setup: (picker) => {
+      picker.on('hide', () => {
+        $('.container__main_before-1').removeClass('on');
+      });
+    },
+    tooltipText: {
+      one: 'night',
+      other: 'nights'
+    },
+    tooltipNumber: (totalDays) => {
+      return totalDays - 1;
+    },
+    lockDaysFilter: (date1, date2, pickedDates) => {
+      return allowedDates.includes(date1.format('YYYY-MM-DD'));
+    }
+  });
+}
+
+if ($('#filter_input_date4').length) {
+  new Litepicker({
+    element: document.getElementById('filter_input_date4'),
+    singleMode: true,
+    delimiter: ' - ',
+    lang: "ru-RU",
+    format: 'DD.MM',
+    numberOfMonths: 1,
+    setup: (picker) => {
+      picker.on('hide', () => {
+        $('.container__main_before-1').removeClass('on');
+      });
+    },
+    tooltipText: {
+      one: 'night',
+      other: 'nights'
+    },
+    tooltipNumber: (totalDays) => {
+      return totalDays - 1;
+    },
+    lockDaysFilter: (date1, date2, pickedDates) => {
+      return allowedDates.includes(date1.format('YYYY-MM-DD'));
+    }
+  });
+}
+
+
+function open_date_pda() {
+  $('#filter_input_date').click(function () {
+    $('.container__main_before-1').addClass('on');
+
+    $('html, body').animate({
+      scrollTop: 0
+    });
+  });    
+}
+
+$(window).resize(function() {
+  if( $(window).width() < 481 ) {
+    open_date_pda();
+  }
+});
+
+if( $(window).width() < 481 ) {
+  open_date_pda();
+}
+
+
+}); //ready
+
+
+
+
 const form1 = document.querySelector('.proftools-form-1'),
 proftoolsBtn = document.querySelector('.proftools-btn');
 
@@ -359,23 +514,3 @@ form2.addEventListener('input', function () {
   proftoolsBtn2.removeAttribute("disabled");
 });
 
-}); //ready
-
-
-
-
-
-
-  $('[data-fancybox="galfiles-1"]').fancybox({
-    arrows: true,
-    infobar: false,
-    smallBtn: false,
-    toolbar: false,
-    iframe : {
-      css : {
-        width : '950px'
-      }
-    },    
-    slideClass: "myClass",
-    baseClass: "myclass"
-  });
