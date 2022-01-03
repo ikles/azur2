@@ -185,6 +185,18 @@ jQuery(document).ready(function( $ ) {
   });
 
 
+
+
+  $('input[name="facilities3"]').click(function() {
+    if ($(this).is(':checked')){
+      $('.filter-col-select-2').removeClass('filter-col-select-dis');
+    }
+    else {
+      $('.filter-col-select-2').addClass('filter-col-select-dis');
+    }
+  });
+
+
   $('.hint-label').click(function () {
     setTimeout(function () {
       $('.popinfo-3').addClass('hide');
@@ -498,19 +510,24 @@ if( $(window).width() < 481 ) {
 }); //ready
 
 
+function elemEnable(elem) {
+  if (document.querySelector(elem) != null) {
+    return true;
+  }
+}
+
+if (elemEnable('.proftools-form-1') && elemEnable('.proftools-btn') ) {
+  document.querySelector('.proftools-form-1').addEventListener('input', function () {
+    document.querySelector('.proftools-btn').removeAttribute("disabled");
+  });
+}
+
+if (elemEnable('.proftools-form-2') && elemEnable('.proftools-btn-2') ) {
+  document.querySelector('.proftools-form-2').addEventListener('input', function () {
+    document.querySelector('.proftools-btn-2').removeAttribute("disabled");
+  });
+}
 
 
-const form1 = document.querySelector('.proftools-form-1'),
-proftoolsBtn = document.querySelector('.proftools-btn');
 
-form1.addEventListener('input', function () {
-  proftoolsBtn.removeAttribute("disabled");
-});
-
-const form2 = document.querySelector('.proftools-form-2'),
-proftoolsBtn2 = document.querySelector('.proftools-btn-2');
-
-form2.addEventListener('input', function () {
-  proftoolsBtn2.removeAttribute("disabled");
-});
 
