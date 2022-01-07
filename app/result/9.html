@@ -5,7 +5,7 @@
   <!--meta name="viewport" content="width=1200px"-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>8. Azur. New Object</title>  
+  <title>9. Azur. New Object. Apartment</title>  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">
@@ -195,13 +195,7 @@
                           <span class="label-span-txt">Частный сектор</span>
                         </label>
                       </div>
-                    </div><!--label-->
-                    <div class="createobj-input-label">
-                      <span class="input-label-txt input-txt-has-link">
-                        <span>Название <sup>*</sup></span>                    
-                      </span> 
-                      <input type="text" class="createobj-input filter-input icon title" placeholder="Например: Отель Москва">
-                    </div><!--label-->
+                    </div><!--label-->                    
                     <div class="createobj-input-label">
                       <span class="input-label-txt input-txt-has-link">
                         <span>Адрес <sup>*</sup></span>
@@ -262,23 +256,21 @@
                       </div>
                     </div>
 
-                    <div class="proftools-col-100">
-                      <a href="#" class="add-contact">Добавить контакт</a>
+                    <div class="proftools-col-100 proftools-col-last">
+                      <a href="#" class="add-contact add-contact-2">Добавить контакт</a>
                     </div>
 
 
-                    <div class="proftools-col proftools-col-last">
-                      <div class="input-label">
-                        <span class="input-label-txt">Сайт</span>
-                        <input type="text" class="createobj-input filter-input icon site" requred="" placeholder="Например: azur.ru">
-                      </div>
-                    </div><!--col-->
+                    
 
                   </div>
                 </div><!--form-section-->
                 <div class="createobj-form-section">
-                  <div class="proftools-tit">Фото внешнего вида</div>
+                  <div class="proftools-tit">Фото квартиры</div>
                   <input type="file" id="file"> 
+
+
+
                   <div class="objphotos-formats">Допустимые форматы: JPEG, JPG, PNG</div>
                 </div><!--form-section-->
                 <div class="createobj-form-section">
@@ -302,7 +294,70 @@
                     <input type="text" class="createobj-input filter-input" placeholder="Например: Трансфер, экскурсии">
                   </div><!--label-->
 
-                  <div class="proftools-tit">Удобства</div>
+                  <div class="proftools-tit-18">О квартире</div>
+
+                  <div class="proftools-row mb40">
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Этаж</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Комнат</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Спальных мест</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                    <div class="proftools-col-25">
+                      <div class="createobj-input-label">
+                        <span class="input-label-txt">
+                          <span>Площадь</span>                      
+                        </span> 
+                        <input type="text" class="createobj-input filter-input " placeholder="0">
+                      </div><!--label-->
+                    </div>
+                  </div><!--proftools-row-->
+                  <div class="createobj-input-label">
+                    <span class="input-label-txt">
+                      <span>Принцип предоплаты</span>
+                    </span> 
+                    <input type="text" class="createobj-input filter-input" placeholder="Например: Трансфер, экскурсии">
+                  </div><!--label-->
+
+                  <div class="proftools-row mb40">
+                    <div class="proftools-col">
+                      <div class="input-label">
+                        <span class="input-label-txt">Кухня</span>
+                        <input type="text" class="createobj-input filter-input" placeholder="Например: Общая">
+                      </div>
+                    </div><!--col-->
+                    <div class="proftools-col">
+                      <div class="input-label">
+                        <span class="input-label-txt">Санузел</span>
+                        <input type="text" class="createobj-input filter-input" placeholder="Например: Раздельный, в номере">
+                      </div>
+                    </div><!--col-->
+                  </div><!--row-->
+
+
+                  <div class="proftools-tit-18">Описание квартиры</div>
+
+                  <textarea class="area" placeholder="Например: Трёхкомнатная квартира в центре"></textarea>
+
+                  <div class="proftools-tit-18">Удобства</div>
 
                   <div class="createobj-row-33 createobj-row-facilities">                    
                    <label class="filter-label facilities-check-label">
@@ -380,11 +435,7 @@
                     <span></span>
                     <span class="label-span-txt">Кондиционер</span>
                   </label>
-                </div>                  
-
-                <div class="proftools-tit">Описание объекта</div>
-
-                <textarea class="area" placeholder="Например: Трёхкомнатная квартира в центре"></textarea>
+                </div>   
 
                 <div class="createobj-input-label">
                   <span class="input-label-txt">
@@ -412,169 +463,7 @@
                   </div>
                 </div>
               </div><!--form-section-->
-            </div><!--form-it-->
-            <div class="createobj-h2">Номера</div>
-            <div class="createobj-form-it" id="two">
               <div class="createobj-form-section">
-                <div class="proftools-tit2">
-                  Основная информация
-                  <div class="createobj-del"><div class="createobj-del-txt">#234234</div></div>
-                </div>
-
-
-                <div class="createobj-input-label">
-                  <span class="input-label-txt">Тип</span>                
-                  <div class="createobj-checks-row">
-                    <label class="filter-label createobj-check-label">
-                      <input type="checkbox" class="createobj-checkbox" name="typeobject2" checked>
-                      <span></span>
-                      <span class="label-span-txt">Номер</span>
-                    </label>
-                    <label class="filter-label createobj-check-label">
-                      <input type="checkbox" class="createobj-checkbox" name="typeobject2">
-                      <span></span>
-                      <span class="label-span-txt">Квартира</span>
-                    </label>
-                    <label class="filter-label createobj-check-label">
-                      <input type="checkbox" class="createobj-checkbox" name="typeobject2">
-                      <span></span>
-                      <span class="label-span-txt">Дом</span>
-                    </label>
-
-                  </div>
-                </div><!--label-->
-
-                <div class="createobj-input-label">
-                  <span class="input-label-txt input-txt-has-link">
-                    <span>Название</span>
-                    <span class="count-100"><span class="now-val">0</span> / 100</span>
-                  </span> 
-                  <input type="text" maxlength="100" id="myTextbox1" class="createobj-input filter-input icon title" placeholder="Например: Трехместный номер">
-                </div><!--label-->
-                <div class="proftools-row mb40">
-                  <div class="proftools-col-25">
-                    <div class="createobj-input-label">
-                      <span class="input-label-txt">
-                        <span>Этаж</span>                      
-                      </span> 
-                      <input type="text" class="createobj-input filter-input " placeholder="0">
-                    </div><!--label-->
-                  </div>
-                  <div class="proftools-col-25">
-                    <div class="createobj-input-label">
-                      <span class="input-label-txt">
-                        <span>Комнат</span>                      
-                      </span> 
-                      <input type="text" class="createobj-input filter-input " placeholder="0">
-                    </div><!--label-->
-                  </div>
-                  <div class="proftools-col-25">
-                    <div class="createobj-input-label">
-                      <span class="input-label-txt">
-                        <span>Спальных мест</span>                      
-                      </span> 
-                      <input type="text" class="createobj-input filter-input " placeholder="0">
-                    </div><!--label-->
-                  </div>
-                  <div class="proftools-col-25">
-                    <div class="createobj-input-label">
-                      <span class="input-label-txt">
-                        <span>Площадь</span>                      
-                      </span> 
-                      <input type="text" class="createobj-input filter-input " placeholder="0">
-                    </div><!--label-->
-                  </div>
-                </div><!--proftools-row-->
-
-                <div class="createobj-input-label">
-                  <span class="input-label-txt">
-                    <span>Мебель</span>                      
-                  </span> 
-                  <input type="text" maxlength="100" class="createobj-input filter-input" placeholder="Например: две односпальные кровати, раскладной диван, прикроватные тумбочки, шкаф, столик">
-                </div><!--label-->
-
-                <div class="proftools-row">
-                  <div class="proftools-col">
-                    <div class="input-label">
-                      <span class="input-label-txt">Кухня</span>
-                      <input type="text" class="createobj-input filter-input" placeholder="Например: Общая">
-                    </div>
-                  </div><!--col-->
-                  <div class="proftools-col">
-                    <div class="input-label">
-                      <span class="input-label-txt">Санузел</span>
-                      <input type="text" class="createobj-input filter-input" placeholder="Например: Раздельный, в номере">
-                    </div>
-                  </div><!--col-->
-                </div><!--row-->
-
-                <div class="input-label">
-                  <span class="input-label-txt">Описание номера</span>
-
-                  <textarea class="area" placeholder="Например: Трёхкомнатная квартира в центре"></textarea>
-                </div>
-                <div class="input-label">
-                  <span class="input-label-txt">Удобства</span>
-                  <div class="createobj-row-33 createobj-row-33-2">
-                   <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Телевизор</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Кухня</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Сейф</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Кондиционер</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Холодильник</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Чайник</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Фен</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Вентилятор</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Душ</span>
-                  </label>
-                  <label class="filter-label facilities-check-label">
-                    <input type="checkbox" class="createobj-checkbox" name="facilities2">
-                    <span></span>
-                    <span class="label-span-txt">Стиральная машина</span>
-                  </label>
-                </div> 
-              </div>
-            </div><!--createobj-form-section-->
-            <div class="createobj-form-section">
-              <div class="proftools-tit">Фотографии номера</div>
-              <input type="file" id="file2">
-              <div class="objphotos-formats">Допустимые форматы: JPEG, JPG, PNG</div>
-            </div><!--createobj-form-section-->
-            <div class="createobj-form-section">
                           <div class="proftools-tit">Цена</div>
               <ul class="price-tabs">
                 <li class="price-tabs-li">
@@ -676,24 +565,10 @@
             <a href="#" class="add-reriod">Добавить период</a>
           </div><!--datas-->
             </div><!--createobj-form-section-->
-          </div><!--form-it-->
-          <div class="createobj-form-it createobj-form-actions">
-            <a href="#" class="createobj-form-btn btn-o">Добавить номер</a>
+            </div><!--form-it-->
+            
 
-            <div class="createobj-action-right">
-              <label class="filter-label createobj-actions-label">
-                <input type="checkbox" class="createobj-checkbox" name="facilities3">
-                <span></span>
-                <span class="label-span-txt">Дублировать:</span>
-              </label>
 
-              <select class="filter-col-select filter-col-select-2 filter-col-select-dis">
-                <option value="Предыдущий номер">Предыдущий номер</option>
-                <option value="Следующий номер">Следующий номер</option>  
-              </select>
-
-            </div>
-          </div><!--it-->
 
           <div class="createobj-pay">
             <div class="createobj-h2">Оплата</div>
@@ -703,8 +578,7 @@
               </div>
             </div>
           </form>
-          <button class="createobj-btn btn">Разместить объект</button>
-        </form>
+                  
 
       </div><!--col-r-->
     </div><!--col-r-->

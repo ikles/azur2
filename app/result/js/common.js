@@ -50,7 +50,48 @@ function upload(selector, options = {}) {
 
     input.insertAdjacentElement('afterend', preview)
     //input.insertAdjacentElement('afterend', upload)
-    preview.insertAdjacentElement('afterbegin', open)
+
+    const somePhotos = `
+    <div class="preview-image objphotos-it">
+    <div class="objphotos-actions">
+    <a data-fancybox="galfiles-1" href="img/objphotos-2.jpg" class="objphotos-action-full"></a>
+    <div class="preview-remove objphotos-action-del" data-name="objphotos-2.jpg"></div>
+    </div>
+    <img class="objphotos-img" src="img/objphotos-2.jpg" alt="objphotos-2.jpg">
+    </div>
+
+    <div class="preview-image objphotos-it">
+    <div class="objphotos-actions">
+    <a data-fancybox="galfiles-1" href="img/objphotos-1.jpg" class="objphotos-action-full"></a>
+    <div class="preview-remove objphotos-action-del" data-name="objphotos-1.jpg"></div>
+    </div>
+    <img class="objphotos-img" src="img/objphotos-1.jpg" alt="objphotos-1.jpg">
+    </div>
+
+    <div class="preview-image objphotos-it">
+    <div class="objphotos-actions">
+    <a data-fancybox="galfiles-1" href="img/hot-5.jpg" class="objphotos-action-full"></a>                
+    <div class="preview-remove objphotos-action-del" data-name="hot-5.jpg"></div>
+    </div>
+    <img class="objphotos-img" src="img/hot-5.jpg" alt="hot-5.jpg">
+    </div>
+
+    <div class="preview-image objphotos-it">
+    <div class="objphotos-actions">
+    <a data-fancybox="galfiles-1" href="img/hot-4.jpg" class="objphotos-action-full"></a>                
+    <div class="preview-remove objphotos-action-del" data-name="hot-4.jpg"></div>
+    </div>
+    <img class="objphotos-img" src="img/hot-4.jpg" alt="hot-4.jpg">
+    </div>
+    `
+
+    preview.innerHTML = somePhotos
+
+    preview.insertAdjacentElement('beforeend', open)
+
+
+
+    
 
     const triggerInput = () => input.click()
 
@@ -80,7 +121,7 @@ function upload(selector, options = {}) {
         preview.insertAdjacentHTML('afterbegin', `
           <div class="preview-image objphotos-it">
           <div class="objphotos-actions">
-          <a data-fancybox="galfiles-1" href="img/${file.name}" class="objphotos-action-full"></a>                
+          <a data-fancybox="galfiles-1" href="${src}" class="objphotos-action-full"></a>                
           <div class="preview-remove objphotos-action-del" data-name="${file.name}"></div>
           </div>
           <img class="objphotos-img" src="${src}" alt="${file.name}" />
@@ -155,14 +196,6 @@ if (document.querySelectorAll('#file2').length ) {
     }
   })  
 }
-
-
-
-
-
-
-
-
 
 jQuery(document).ready(function( $ ) {
 
@@ -290,7 +323,10 @@ jQuery(document).ready(function( $ ) {
   });
   
 
-
+  $('.addsale-close').click(function (e) {
+    e.preventDefault();
+    $(this).parent().parent().fadeOut();
+  });
 
   $('.search-btn').click(function () {
     $('.search-input-list-wrap-1').fadeIn();
@@ -507,7 +543,117 @@ if( $(window).width() < 481 ) {
 }
 
 
+
+let inputFile = document.querySelector('#fileMulti');
+let imgWrapper = document.querySelector('.addsale-upload-icon');
+
+
+function download2(input) {
+  let file = input.files[0];
+  
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+/*  reader.onload = function () {    
+    imgWrapper.innerHTML = file.name;
+  }*/
+  reader.onload = ev => {
+    const src = ev.target.result
+    imgWrapper.innerHTML = `<img class="objphotos-img" src="${src}" alt="${file.name}" />`
+  }
+}
+
+
+if ($('#fileMulti').length) {
+  inputFile.addEventListener("change", function () {
+    download2(this);
+  });
+}
+
+$('.add-contact2').click(function (e) {
+  e.preventDefault();
+  $('.addsale-overlay').fadeIn();
+  $('html, body').animate({
+    scrollTop: 0
+  });
+});
+
+$('.addsale-pda-header').click(function (e) {
+  e.preventDefault();
+  $('.addsale-overlay').fadeOut();
+});
+
+
+
 }); //ready
+
+
+
+
+//chart
+
+var options = {
+  series: [{
+    name: 'Просмотры',
+    data: [2, 2, 1, 0.2, 2, 3, 2]
+  }, {
+    name: 'Контакты',
+    data: [1, 0.2, 0.2, 0.2, 1, 1, 0.2]
+  }],
+  chart: {
+    type: 'bar',
+    height: 350
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: '21%',
+      endingShape: 'rounded'
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  xaxis: {
+    //categories: ['Чт', 'Пт', 'Сб', 'Вс', 'Пн', 'Вт', 'Ср'],
+    categories: [
+            ['John', 'Doe'],
+            ['Joe', 'Smith'],
+            ['Jake', 'Williams'],            
+            ['Peter', 'Brown'],
+            ['Mary', 'Evans'],
+            ['David', 'Wilson'],
+            ['Lily', 'Roberts'], 
+          ],
+  },
+
+  yaxis: {
+    title: {
+      text: ''
+    }
+  },
+  fill: {
+    opacity: 1
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "" + val + ""
+      }
+    }
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+//chart
+
+
 
 
 function elemEnable(elem) {

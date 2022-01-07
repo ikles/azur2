@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11. Azur. Sales</title>
+  @@include('var/_styless.html')
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+      <div class="contain">
+        <div class="sales-wrapper">
+          <a href="#" class="back-link back-link-addsale">Назад</a>
+          <div class="search-orders">
+            <div class="ordersdown-w ordersdown-w-rat">
+              <div class="ordersdown" data-total="1">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                </div>
+              </div>
+              <div class="ordersopen ordersopen-rat">
+                <div class="ordersopen-elem active" data-val="2">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Квартира</div>
+                    <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                  </div>
+                </div>
+                <div class="ordersopen-elem" data-val="3">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Гостевой дом</div>
+                    <div class="ordersopen-txt-2">Лотос</div>
+                  </div>
+                </div>
+                <div class="ordersopen-elem" data-val="4">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-3.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Квартира</div>
+                    <div class="ordersopen-txt-2">Студия в центре города</div>
+                  </div>
+                </div>
+                <div class="ordersopen-elem" data-val="5">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Квартира</div>
+                    <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sales-items">
+            <div class="sales-item">
+              <a href="#" class="sales-img-w"><img src="img/sales-1.jpg" class="sales-img" /></a>
+              <div class="sales-right">
+                <div class="sales-txts">
+                  <a href="#" class="sales-title">При бронировании с сайта Azur.ru на август скидка 10%. При
+                  бронировании на срок более 14 дней скидка - 10%. Скидки суммируются.</a>
+                  <div class="sales-date">До 26 сентября</div>
+                </div>
+                <div class="sales-actions">
+                  <a href="#" class="sales-edit"><img src="img/pen-i.svg" /></a><a href="#" class="sales-remove"><img
+                    src="img/remove-red.svg" /></a>
+                  </div>
+                </div>
+              </div>
+              <!--sales-item-->
+              <div class="sales-item">
+                <a href="#" class="sales-img-w"><img src="img/sales-2.jpg" class="sales-img" /></a>
+                <div class="sales-right">
+                  <div class="sales-txts">
+                    <a href="#" class="sales-title">При бронировании с сайта Azur.ru на август скидка 10%. При
+                    бронировании на срок более 14 дней скидка - 10%. Скидки суммируются.</a>
+                    <div class="sales-date">До 26 сентября</div>
+                  </div>
+                  <div class="sales-actions">
+                    <a href="#" class="sales-edit"><img src="img/pen-i.svg" /></a><a href="#" class="sales-remove"><img
+                      src="img/remove-red.svg" /></a>
+                    </div>
+                  </div>
+                </div>
+                <!--sales-item-->
+              </div>
+              <!--sales-items-->
+              <a href="#" class="add-contact add-contact2">Добавить акцию</a>
+            </div>
+            <!--sales-wrapper-->
+          </div>
+          <!--contain-->
+        </main>
+        <div class="addsale-overlay">
+          <div class="addsale-overlay-inner">
+            <a class="sign2 addsale-close"></a>
+            <div class="addsale-popup">
+              <div class="addsale-top">
+                <div class="addsale-title">Новая акция</div>
+                <div class="show-570 addsale-pda-header">Новая акция</div>
+                <div class="addsale-subtitle">Лотос</div>
+              </div>
+              <div class="addsale-body">
+                <div class="addsale-lebel-text">Описание</div>
+                <textarea class="addsale-textarea area" placeholder="Ваш телефон"></textarea>
+                <input type="text" readonly="readonly" id="filter_input_date" class="filter-input icon date"
+                placeholder="Дата окончания">
+                <div class="addsale-actions">
+                  <label class="addsale-upload-box">
+                    <input size="40" accept=".html,.html,.pdf,.docx,.doc,.xls,.xlsx,.txt,.jpg,.jpeg,.png"
+                    class="multi-file-input" type="file" id="fileMulti" aria-invalid="false">                      
+                    <div class="addsale-upload-icon">
+                      <div class="addsale-upload-icon-inn">
+                        <img src="img/uploadd2.svg">
+                      </div>
+                    </div>
+                    <div class="addsale-upload-text">Загрузить фото</div>
+                  </label>                    
+                  <a href="#" class="addsale-btn btn">Добавить акцию</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--wrapper-->
+
+      @@include('var/_scripts.html')
+    </body>
+
+    </html>
