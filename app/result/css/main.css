@@ -4505,6 +4505,63 @@ a.add-reriod {
           align-items: center;
   cursor: pointer; }
 
+.stat-wrapper {
+  padding-top: 30px; }
+
+.wrapper-10 {
+  padding-bottom: 40px; }
+
+.ordersdown-w-stat {
+  margin-bottom: 20px; }
+
+.chart-wrapper {
+  background-color: #FFF;
+  padding: 37px 30px;
+  box-shadow: 0px 20px 20px -10px rgba(46, 52, 68, 0.07);
+  border-radius: 10px; }
+
+.apexcharts-toolbar {
+  display: none !important; }
+
+.apexcharts-legend {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  z-index: 10 !important;
+  display: none !important; }
+
+.apexcharts-legend-marker {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  margin-right: 10px !important; }
+
+.apexcharts-legend-text {
+  font-size: 16px !important; }
+
+.apexcharts-legend-series {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-items: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin-top: 0 !important; }
+  .apexcharts-legend-series + .apexcharts-legend-series {
+    margin-left: 50px !important; }
+
+.apexcharts-text {
+  fill: #C2CCDA !important; }
+  .apexcharts-text tspan:nth-child(2) {
+    font-size: 12px; }
+  .apexcharts-text tspan:nth-child(1) {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #2F3544;
+    fill: #2F3544; }
+
 @media only screen and (max-width: 768px) {
   .price-tabs-link .show-768 {
     display: inline; } }

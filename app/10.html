@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <div class="wrapper">
+  <div class="wrapper wrapper-10">
     @@include('var/_header.html')    
     
     <main class="main">
@@ -24,7 +24,49 @@
       <div class="contain">
 
         <div class="stat-wrapper">
-          <div id="chart"></div>
+          <a href="#" class="back-link back-link-stat">Назад</a>
+          <div class="ordersdown-w ordersdown-w-stat">
+            <div class="ordersdown" data-total="1">
+              <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+              <div class="ordersopen-txts">
+                <div class="ordersopen-txt-1">Квартира</div>
+                <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+              </div>
+            </div>
+            <div class="ordersopen ordersopen-rat">
+              <div class="ordersopen-elem active" data-val="2">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="3">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Гостевой дом</div>
+                  <div class="ordersopen-txt-2">Лотос</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="4">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-3.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">Студия в центре города</div>
+                </div>
+              </div>
+              <div class="ordersopen-elem" data-val="5">
+                <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                <div class="ordersopen-txts">
+                  <div class="ordersopen-txt-1">Квартира</div>
+                  <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-wrapper">
+          <div class="chart" id="chart-1"></div>
+        </div>
         </div><!--stat-wrapper-->
 
       </div>

@@ -587,21 +587,21 @@ $('.addsale-pda-header').click(function (e) {
 }); //ready
 
 
-
-
 //chart
 
 var options = {
+  colors: ['#3181F6', '#FE6A40'],
   series: [{
     name: 'Просмотры',
-    data: [2, 2, 1, 0.2, 2, 3, 2]
+    data: [2, 2, 1, 0.2, 2, 3, 2],    
   }, {
     name: 'Контакты',
     data: [1, 0.2, 0.2, 0.2, 1, 1, 0.2]
-  }],
+  }],  
   chart: {
     type: 'bar',
-    height: 350
+    height: 640,
+    offsetY: 0
   },
   plotOptions: {
     bar: {
@@ -609,6 +609,33 @@ var options = {
       columnWidth: '21%',
       endingShape: 'rounded'
     },
+  },
+  legend: {    
+    offsetX: 0,
+    offsetY: 0,
+    fontSize: '12px',
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 600,
+    position: 'top',
+    horizontalAlign: 'left',
+    onItemClick: {
+      toggleDataSeries: false
+    },
+    onItemHover: {
+      highlightDataSeries: false
+    },    
+  },
+  markers: {
+    width: 12,
+    height: 12,
+    strokeWidth: 0,
+    strokeColor: '#fff',
+    fillColors: ['#3181F6', '#FE6A40'],
+    radius: 12,
+    customHTML: undefined,
+    onClick: undefined,
+    offsetX: 0,
+    offsetY: 0
   },
   dataLabels: {
     enabled: false
@@ -618,26 +645,46 @@ var options = {
     width: 2,
     colors: ['transparent']
   },
-  xaxis: {
-    //categories: ['Чт', 'Пт', 'Сб', 'Вс', 'Пн', 'Вт', 'Ср'],
+  xaxis: {      
     categories: [
-            ['John', 'Doe'],
-            ['Joe', 'Smith'],
-            ['Jake', 'Williams'],            
-            ['Peter', 'Brown'],
-            ['Mary', 'Evans'],
-            ['David', 'Wilson'],
-            ['Lily', 'Roberts'], 
-          ],
+    ['23', 'Чт'],
+    ['24', 'Пт'],
+    ['25', 'Сб'],
+    ['26', 'Вс'],
+    ['27', 'Пн'],
+    ['28', 'Вт'],
+    ['29', 'Ср'], 
+    ],
   },
-
   yaxis: {
     title: {
       text: ''
-    }
+    },
+    logBase: 10,
+    tickAmount: 5,
+    min: 0,
+    max: 5,
+    labels: {
+      show: true,
+      align: 'right',
+      minWidth: 0,
+      maxWidth: 160,
+      style: {
+        colors: [],
+        fontSize: '14px',        
+        fontFamily: "'Montserrat', sans-serif",
+        fontWeight: 600,
+        cssClass: 'apexcharts-yaxis-label',
+      },
+      offsetX: 0,
+      offsetY: 0,
+      rotate: 0,
+      formatter: (value) => { return value },
+    },
   },
   fill: {
-    opacity: 1
+    opacity: 1,
+    //colors: ['#3181F6', '#FE6A40']
   },
   tooltip: {
     y: {
@@ -648,7 +695,7 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
+var chart = new ApexCharts(document.querySelector("#chart-1"), options);
 chart.render();
 
 //chart
