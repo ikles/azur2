@@ -6,6 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>10. Azur. Statistics</title>  
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">
@@ -60,58 +68,102 @@
 
         <div class="stat-wrapper">
           <a href="#" class="back-link back-link-stat">Назад</a>
-          <div class="ordersdown-w ordersdown-w-stat">
-            <div class="ordersdown" data-total="1">
-              <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
-              <div class="ordersopen-txts">
-                <div class="ordersopen-txt-1">Квартира</div>
-                <div class="ordersopen-txt-2">3-комнатная квартира...</div>
-              </div>
-            </div>
-            <div class="ordersopen ordersopen-rat">
-              <div class="ordersopen-elem active" data-val="2">
+          <div class="stat-top-actions">
+            <div class="ordersdown-w ordersdown-w-stat">
+              <div class="ordersdown" data-total="1">
                 <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
                 <div class="ordersopen-txts">
                   <div class="ordersopen-txt-1">Квартира</div>
                   <div class="ordersopen-txt-2">3-комнатная квартира...</div>
                 </div>
               </div>
-              <div class="ordersopen-elem" data-val="3">
-                <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
-                <div class="ordersopen-txts">
-                  <div class="ordersopen-txt-1">Гостевой дом</div>
-                  <div class="ordersopen-txt-2">Лотос</div>
+              <div class="ordersopen ordersopen-rat">
+                <div class="ordersopen-elem active" data-val="2">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-1.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Квартира</div>
+                    <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                  </div>
                 </div>
-              </div>
-              <div class="ordersopen-elem" data-val="4">
-                <div class="ordersopen-img-w"><img src="img/ordersopen-img-3.jpg" class="ordersopen-img" /></div>
-                <div class="ordersopen-txts">
-                  <div class="ordersopen-txt-1">Квартира</div>
-                  <div class="ordersopen-txt-2">Студия в центре города</div>
+                <div class="ordersopen-elem" data-val="3">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Гостевой дом</div>
+                    <div class="ordersopen-txt-2">Лотос</div>
+                  </div>
                 </div>
-              </div>
-              <div class="ordersopen-elem" data-val="5">
-                <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
-                <div class="ordersopen-txts">
-                  <div class="ordersopen-txt-1">Квартира</div>
-                  <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                <div class="ordersopen-elem" data-val="4">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-3.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Квартира</div>
+                    <div class="ordersopen-txt-2">Студия в центре города</div>
+                  </div>
+                </div>
+                <div class="ordersopen-elem" data-val="5">
+                  <div class="ordersopen-img-w"><img src="img/ordersopen-img-2.jpg" class="ordersopen-img" /></div>
+                  <div class="ordersopen-txts">
+                    <div class="ordersopen-txt-1">Квартира</div>
+                    <div class="ordersopen-txt-2">3-комнатная квартира...</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="chart-wrapper">
-          <div class="chart" id="chart-1"></div>
+
+
+            <div class="stat-actions">
+              <div class="stat-select-wrapper">
+                <div class="stat-select-caption">Показать за:</div>
+                <select class="stat-select">
+                  <option value="Неделю">Неделю</option>
+                  <option value="Месяц">Месяц</option>
+                </select>
+              </div>
+              <div class="stat-mounth">
+                <img src="img/date.svg">
+                <div class="stat-mounth-txt">
+                  <strong>Октябрь</strong>, 2021
+                </div>
+              </div>
+              <div class="stat-arrows">
+                <div class="stat-arrow"></div>
+                <div class="stat-arrow stat-arrow--right"></div></div>
+              </div>
+
+            </div>
+
+
+            <div class="chart-wrapper">
+              <div class="chart-header">
+                <div class="chart-left">
+                  <div class="chart-view">
+                    <div class="chart-view-circle blue"></div>
+                    <div class="chart-view-caption">Просмотры</div>
+                  </div>
+                  <div class="chart-view">
+                    <div class="chart-view-circle red"></div>
+                    <div class="chart-view-caption">Контакты</div>
+                  </div>
+                </div>
+                <div class="chart-right">
+                  <ul class="chart-info-list">
+                    <li class="chart-info-list-item">12 просмотра</li>
+                    <li class="chart-info-list-item">3 контакта</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="chart" id="chart-1"></div>
+            </div>
+          </div><!--stat-wrapper-->
+
         </div>
-        </div><!--stat-wrapper-->
 
-      </div>
+      </main>
 
-    </main>
+    </div>
+    <!--wrapper-->
 
-  </div>
-  <!--wrapper-->
-
-  <script src="js/jquery-3.4.1.min.js"></script>      
+    <script src="js/jquery-3.4.1.min.js"></script>      
 <!--script src="js/slick.js"></script-->
 <script src="js/jquery.hideseek.js"></script>
 <script src="js/litepicker.js"></script>
@@ -126,6 +178,6 @@
   <script src="js/common.js"></script>
   <!-- <div class="container__main_before container__main_before-1">Дата заезда/выезда</div>
   <div class="container__main_before container__main_before-2">Количество гостей</div> -->
-</body>
-</html>
+  </body>
+  </html>
 

@@ -6,6 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>9. Azur. New Object. Apartment</title>  
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap" rel="stylesheet">
@@ -465,34 +473,36 @@
               </div><!--form-section-->
               <div class="createobj-form-section">
                           <div class="proftools-tit">Цена</div>
-              <ul class="price-tabs">
-                <li class="price-tabs-li">
-                  <a href="#" class="price-tabs-link act">
-                    Период
-                    <div class="price-tabs-link-act-before"></div>
-                  </a>
-                </li>
-                <li class="price-tabs-li"><a href="#" class="price-tabs-link">Фикс<span class="show-768">.</span><span class="hide-768">ированная</span> сумма</a></li>
-              </ul>
-
-
-
-              <div class="countrow-wrap">
-                <div class="countrow">
-                  <div class="countrow-tit">Количество людей:</div>
-                  <div class="countrow-right">
-                    <select class="countrow-sel">
-                      <option value="от 1 до 3 чел.">от 1 до 3 чел.</option>
-                      <option value="от 4 до 6 чел.">от 4 до 6 чел.</option>
-                      <option value="от 7 до 10 чел.">от 7 до 10 чел.</option>
-                    </select>
-                    <div class="createobj-add">Добавить</div>
-                    <div class="createobj-add">Добавить</div>
-                  </div>
+            <ul class="price-tabs">
+              <li class="price-tabs-li">
+                <a href="#" data-type="period" class="price-tabs-link act">
+                  Период
+                  <div class="price-tabs-link-act-before"></div>
+                </a>
+              </li>
+              <li class="price-tabs-li">
+                <a href="#" data-type="fix" class="price-tabs-link">Фикс<span class="show-768">
+                .</span>
+                <span class="hide-768">ированная</span> сумма</a>
+              </li>
+            </ul>
+            <div class="countrow-wrap">
+              <div class="countrow">
+                <div class="countrow-tit">Количество людей:</div>
+                <div class="countrow-right">
+                  <select class="countrow-sel">
+                    <option value="от 1 до 3 чел.">от 1 до 3 чел.</option>
+                    <option value="от 4 до 6 чел.">от 4 до 6 чел.</option>
+                    <option value="от 7 до 10 чел.">от 7 до 10 чел.</option>
+                  </select>
+                  <div class="createobj-add">Добавить</div>
+                  <div class="createobj-add">Добавить</div>
                 </div>
               </div>
-              <div class="datas">
-                <div class="datasrow">
+            </div>
+            <div class="datas">
+              <div class="datasrow">
+                <div class="datascol-period">
                  <div class="datascol">
                   <div class="datascol-icon">
                     <div class="input-i-block"></div>
@@ -513,56 +523,63 @@
                     <div class="datas-curr">₽</div>
                   </div>
                 </div><!--col-->
-                <div class="datascol datascol-dis">
+              </div>
+              <div class="datascol-fix datascol-dis">
+                <div class="datascol">
                   <div class="datascol-bord">
                     <input type="text" class="filter-input datas-input" placeholder="3500">
                     <div class="datas-curr">₽</div>
                   </div>
                 </div><!--col-->
-                <div class="datascol datascol-dis">
+                <div class="datascol">
                   <div class="datascol-bord">
                     <input type="text" class="filter-input datas-input" placeholder="3500">
                     <div class="datas-curr">₽</div>
                   </div>
                 </div><!--col-->
-                <span class="datasrow-remove"></span>
-              </div><!--row-->
-              <div class="datasrow">
-               <div class="datascol">
-                <div class="datascol-icon">
-                  <div class="input-i-block"></div>
-                  <div class="datas-lbl">от: </div>
-                  <input type="text" readonly="readonly" id="filter_input_date" class="filter-input datas-input date-input" placeholder="01.07">
-                </div>
-              </div><!--col-->
-              <div class="datascol">
-                <div class="datascol-icon">
-                  <div class="input-i-block"></div>
-                  <div class="datas-lbl">до: </div>
-                  <input type="text" readonly="readonly" id="filter_input_date2" class="filter-input datas-input date-input" placeholder="31.12">
-                </div>
-              </div><!--col-->
-              <div class="datascol">
-                <div class="datascol-bord">
-                  <input type="text" class="filter-input datas-input" placeholder="3500">
-                  <div class="datas-curr">₽</div>
-                </div>
-              </div><!--col-->
-              <div class="datascol datascol-dis">
-                <div class="datascol-bord">
-                  <input type="text" class="filter-input datas-input" placeholder="3500">
-                  <div class="datas-curr">₽</div>
-                </div>
-              </div><!--col-->
-              <div class="datascol datascol-dis">
-                <div class="datascol-bord">
-                  <input type="text" class="filter-input datas-input" placeholder="3500">
-                  <div class="datas-curr">₽</div>
-                </div>
-              </div><!--col-->
+              </div>
               <span class="datasrow-remove"></span>
             </div><!--row-->
-            <a href="#" class="add-reriod">Добавить период</a>
+            <div class="datasrow">
+              <div class="datascol-period">
+             <div class="datascol">
+              <div class="datascol-icon">
+                <div class="input-i-block"></div>
+                <div class="datas-lbl">от: </div>
+                <input type="text" readonly="readonly" id="filter_input_date" class="filter-input datas-input date-input" placeholder="01.07">
+              </div>
+            </div><!--col-->
+            <div class="datascol">
+              <div class="datascol-icon">
+                <div class="input-i-block"></div>
+                <div class="datas-lbl">до: </div>
+                <input type="text" readonly="readonly" id="filter_input_date2" class="filter-input datas-input date-input" placeholder="31.12">
+              </div>
+            </div><!--col-->
+            <div class="datascol">
+              <div class="datascol-bord">
+                <input type="text" class="filter-input datas-input" placeholder="3500">
+                <div class="datas-curr">₽</div>
+              </div>
+            </div><!--col-->
+              </div>
+            <div class="datascol-fix datascol-dis">
+              <div class="datascol">
+                <div class="datascol-bord">
+                  <input type="text" class="filter-input datas-input" placeholder="3500">
+                  <div class="datas-curr">₽</div>
+                </div>
+              </div><!--col-->
+              <div class="datascol">
+                <div class="datascol-bord">
+                  <input type="text" class="filter-input datas-input" placeholder="3500">
+                  <div class="datas-curr">₽</div>
+                </div>
+              </div><!--col-->
+            </div>
+            <span class="datasrow-remove"></span>
+          </div><!--row-->
+          <a href="#" class="add-reriod">Добавить период</a>
           </div><!--datas-->
             </div><!--createobj-form-section-->
             </div><!--form-it-->

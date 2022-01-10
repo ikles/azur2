@@ -3468,10 +3468,24 @@ input[type="text"].datas-input {
 .datas-curr {
   margin-right: 13px;
 }
-
+.datascol-period {
+  width: 60%;
+  display: flex;  
+          align-items: center;
+  .datascol {
+    width: 33.333%;
+  }
+}
+.datascol-fix {
+  display: flex;  
+  align-items: center;
+  width: 40%;
+  .datascol {
+            width: 50%;
+          }
+}
 .datascol-dis {
-  position: relative;
-
+  position: relative;            
   &:after {
     content: "";
     display: block;
@@ -3843,21 +3857,15 @@ a.add-reriod {
 }
 
 .wrapper-10 {
-  padding-bottom: 40px;
+  padding-bottom: 68px;
 }
 
-.ordersdown-w-stat {
-  margin-bottom: 20px;
-}
 
 .chart-wrapper {
   background-color: #FFF;  
-  padding: 37px 30px; 
-box-shadow: 0px 20px 20px -10px rgba(46, 52, 68, 0.07);
-border-radius: 10px;
-}
-.chart {
-  
+  padding: 37px 20px 22px 20px; 
+  box-shadow: 0px 20px 20px -10px rgba(46, 52, 68, 0.07);
+  border-radius: 10px;
 }
 
 .apexcharts-toolbar {
@@ -3874,8 +3882,8 @@ border-radius: 10px;
 .apexcharts-legend-marker {
   width: 16px !important;
   height: 16px !important;
-          border-radius: 50% !important;
-          margin-right: 10px !important;
+  border-radius: 50% !important;
+  margin-right: 10px !important;
 }
 
 .apexcharts-legend-text {
@@ -3883,15 +3891,15 @@ border-radius: 10px;
 }
 
 .apexcharts-legend.apx-legend-position-bottom {
-  
+
 }
 
 .apexcharts-legend-series {
   margin-left: 0 !important;
   margin-right: 0 !important;
   display: flex !important;  
-          align-items: center !important;
-          margin-top: 0 !important;
+  align-items: center !important;
+  margin-top: 0 !important;
   + .apexcharts-legend-series {
     margin-left: 50px !important;
   }
@@ -3911,6 +3919,158 @@ border-radius: 10px;
       fill: #2F3544;
     }    
   }
+}
+
+.stat-top-actions {
+  display: flex;  
+  justify-content: space-between;
+  margin-bottom: 20px;          
+  align-items: center;
+}
+
+.ordersdown-w-stat {
+
+}
+
+
+.stat-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stat-select-wrapper {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.stat-select-caption {
+  color: rgb(145, 159, 179);
+  margin-right: 10px;
+}
+
+.stat-mounth {
+  background: #FFF;
+  box-shadow: rgba(46, 52, 68, 0.1) 0px 10px 10px -5px;
+  border-radius: 6px;
+  height: 56px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.stat-mounth-txt {
+  margin-left: 10px;
+}
+
+.stat-arrows {
+  display: flex;
+}
+
+.stat-arrow {
+  background-color: #FFF;  
+  box-shadow: rgba(46, 52, 68, 0.1) 0px 10px 10px -5px;
+  border-radius: 6px;
+  width: 56px;
+  height: 56px;
+  margin-left: 10px;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:before {
+    content: "";
+    display: block;
+    background: url("../img/stat-arrow.svg") center center no-repeat;
+    width: 14px;
+    height: 12px;
+  }
+  &--right {
+    &:before {
+     transform: rotate(180deg);  
+   }   
+ }
+}
+
+.stat-select {
+  + .select2-container .select2-selection--single .select2-selection__rendered {
+    color: #3181F6;
+  }
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 29px;
+  padding-left: 16px;
+}
+
+.chart-left {
+  display: flex;
+  align-items: center;
+}
+
+.chart-view {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.chart-view-circle {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  &.blue {
+    background-color: rgb(49, 129, 246); 
+  }  
+  &.red {  
+    background-color: rgb(254, 106, 64);
+  }
+}
+
+
+.chart-view-caption {
+  font-weight: 600;
+  color: #2F3544;
+}
+
+
+.chart-right {
+  display: flex;
+  align-items: center;
+}
+
+.chart-info-list {
+  display: flex;
+  align-items: center;
+}
+
+.chart-info-list-item {
+  color: rgb(145, 159, 179);  
+  display: flex;  
+  align-items: center;
+  &:not(:first-child) {
+    margin-left: 15px;
+    &:before {
+      flex: none;
+      margin-right: 15px;
+      content: "";
+      display: block;
+      background: #919FB3;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+    } 
+  }  
 }
 
 @import "_media.scss";

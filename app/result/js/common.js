@@ -304,6 +304,36 @@ jQuery(document).ready(function( $ ) {
     scrollInertia: '230'
   });
 
+  if ($('.datas').length) {
+
+    $(window).resize(function() {
+      if( $(window).width() < 768 ) {
+        $(".datas").mCustomScrollbar({
+          axis: "x",
+          theme: "dark-3",
+          mouseWheel: 1,
+          scrollInertia: '230'
+        });  
+      }
+    });
+
+    $(window).resize(function() {
+      if( $(window).width() > 767 ) {
+        $(".datas").mCustomScrollbar("destroy");
+      }
+    });
+
+    if( $(window).width() < 768 ) {
+      $(".datas").mCustomScrollbar({
+        axis: "x",
+        theme: "dark-3",
+        mouseWheel: 1,
+        scrollInertia: '230'
+      });  
+    }
+
+  }
+
 
   
   $('#where_search-1').on('input', function() { 
@@ -583,6 +613,36 @@ $('.addsale-pda-header').click(function (e) {
 });
 
 
+$('.createobj-form-section').each(function () {
+  const control = $(this).find('.price-tabs-link'),
+  controlFix = $(this).find('[data-type="fix"]'),
+  controlPeriod = $(this).find('[data-type="period"]'),
+  period = $(this).find('.datascol-period'),
+  fix =  $(this).find('.datascol-dis'),
+  datasrow = $(this).find('.datasrow');
+
+  
+
+
+  controlFix.click(function (e) {
+    control.removeClass('act');
+    e.preventDefault();
+    period.addClass('datascol-dis');
+    fix.removeClass('datascol-dis');
+    $(this).addClass('act');        
+    datasrow.addClass('transformLeft');      
+  });
+
+  controlPeriod.click(function (e) {
+    control.removeClass('act');
+    e.preventDefault();
+    fix.addClass('datascol-dis');
+    period.removeClass('datascol-dis');
+    $(this).addClass('act');
+    datasrow.removeClass('transformLeft');
+  });
+  
+});
 
 }); //ready
 
@@ -593,20 +653,35 @@ var options = {
   colors: ['#3181F6', '#FE6A40'],
   series: [{
     name: 'Просмотры',
-    data: [2, 2, 1, 0.2, 2, 3, 2],    
+    data: [2, 2, 1, 0.03, 2, 3, 2],    
   }, {
     name: 'Контакты',
-    data: [1, 0.2, 0.2, 0.2, 1, 1, 0.2]
+    data: [1, 0.03, 0.03, 0.03, 1, 1, 0.03]
   }],  
   chart: {
     type: 'bar',
     height: 640,
     offsetY: 0
   },
+  responsive: [{
+    breakpoint: 768,
+    options: {
+      chart: {    
+        height: 450    
+      },
+     plotOptions: {
+    bar: {      
+      columnWidth: '55%',
+      borderRadius: 3,      
+    },
+  }, 
+    },
+  }],
   plotOptions: {
     bar: {
       horizontal: false,
       columnWidth: '21%',
+      borderRadius: 3,
       endingShape: 'rounded'
     },
   },
@@ -695,8 +770,11 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#chart-1"), options);
-chart.render();
+if (elemEnable('#chart-1')) {
+  var chart = new ApexCharts(document.querySelector("#chart-1"), options);
+  chart.render();  
+}
+
 
 //chart
 
